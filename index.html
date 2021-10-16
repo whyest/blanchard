@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard — художественная галерея</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+  <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
 </head>
@@ -14,150 +16,155 @@
 <body>
   <header class="header">
     <div class="header__wrapper header-top">
-        <div class="container header-top__container">
-            <div aria-label="Кнопка вызова меню" class="header-top__burger burger">
-              <span class="burger__line"></span>
-            </div>
-            <a href="#" class="logo header-top__logo">
-              <img src="img/logo.png" alt="Логотип Blanchard — художественная галерея" class="logo__img">
-            </a>
-            <div class="header-top__right">
-              <nav class="nav header-top__nav">
-                <ul class="nav__list list-reset">
-                  <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">События</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Издания</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Проекты</a></li>
-                  <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-                </ul>
-              </nav>
-              <a href="" class="header-top__login" aria-label="Войти в личный кабинет">
-                <svg class="header-top__svg" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
-                    fill="white" />
-                </svg>Войти
-              </a>
-            </div>
-          </div>
+      <div class="container header-top__container">
+        <div aria-label="Кнопка вызова меню" class="header-top__burger burger">
+          <span class="burger__line"></span>
+        </div>
+        <a href="#" class="logo header-top__logo">
+          <img src="img/logo.png" alt="Логотип Blanchard — художественная галерея" class="logo__img">
+        </a>
+        <div class="header-top__right">
+          <nav class="nav header-top__nav">
+            <ul class="nav__list list-reset">
+              <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Галерея</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">События</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Издания</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Проекты</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+            </ul>
+          </nav>
+          <a href="" class="header-top__login" aria-label="Войти в личный кабинет">
+            <svg class="header-top__svg" width="13" height="13" viewBox="0 0 13 13" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"/>
+            </svg>Войти
+          </a>
+        </div>
+      </div>
     </div>
     <div class="header__wrap header-bottom">
       <div class="container header-bottom__container">
         <nav class="nav-category header-bottom__nav">
-            <ul class="nav-category__list list-reset">
-              <li class="nav-category__item dropdown">
-                <button class="nav-category__btn btn-reset">Реализм
-                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6 6L1 1" stroke="white"/>
-                        </svg>
-                </button>
-                <ul class="dropdown-menu list-reset">
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Тинторетто</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Фридрих</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Леонардо</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Верроккьо</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Тинторетто</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Фридрих</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Леонардо</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Верроккьо</a></li>
-                </ul>
-              </li>
-              <li class="nav-category__item dropdown">
-                <button class="nav-category__btn btn-reset">Импрессионизм
-                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6 6L1 1" stroke="white"/>
-                        </svg>
-                </button>
-                <ul class="dropdown-menu list-reset">
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Моне</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Сислей</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Мане</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Ренуар</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Моне</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Сислей</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Мане</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Ренуар</a></li>
-                </ul>
-              </li>
-              <li class="nav-category__item dropdown">
-                <button class="nav-category__btn btn-reset">Постимпрессионизм
-                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6 6L1 1" stroke="white"/>
-                        </svg>
-                </button>
-                <ul class="dropdown-menu list-reset">
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Ван Гог</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Сезанн</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Гоген</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Сёра</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Ван Гог</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Сезанн</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Гоген</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Сёра</a></li>
-                </ul>
-              </li>
-              <li class="nav-category__item dropdown">
-                <button class="nav-category__btn btn-reset">Авангард
-                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6 6L1 1" stroke="white"/>
-                        </svg>
-                </button>
-                <ul class="dropdown-menu list-reset">
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Кандинский</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Маринетти</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Малевич</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Пикассо</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Кандинский</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Маринетти</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Малевич</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Пикассо</a></li>
-                </ul>
-              </li>
-              <li class="nav-category__item dropdown">
-                <button class="nav-category__btn btn-reset">Футуризм
-                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6 6L1 1" stroke="white"/>
-                        </svg>
-                </button>
-                <ul class="dropdown-menu list-reset">
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Карра</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Прателла</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Северини</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Балла</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Карра</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Прателла</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Северини</a></li>
-                  <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Балла</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-          <form action="" class="search-form" tabindex="0">
-            <label class="search-form__label" aria-label="Поле ввода поиска по сайту">
-                <button class="search-form__btn btn-reset">
-                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
-                        </svg>                    
-                </button>
-              <input type="text" class="search-form__input" placeholder="Поиск по сайту" name="name">
-            </label>
-          </form>
+          <ul class="nav-category__list list-reset">
+            <li class="nav-category__item dropdown">
+              <button class="nav-category__btn btn-reset">Реализм
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1"/>
+                </svg>
+              </button>
+              <ul class="dropdown-menu list-reset data-simplebar">
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Тинторетто</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Фридрих</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Леонардо</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Верроккьо</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Тинторетто</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Фридрих</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Леонардо</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Верроккьо</a></li>
+              </ul>
+            </li>
+            <li class="nav-category__item dropdown">
+              <button class="nav-category__btn btn-reset">Импрессионизм
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1"/>
+                </svg>
+              </button>
+              <ul class="dropdown-menu list-reset">
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Моне</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Сислей</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Мане</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Ренуар</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Моне</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Сислей</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Мане</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Ренуар</a></li>
+              </ul>
+            </li>
+            <li class="nav-category__item dropdown">
+              <button class="nav-category__btn btn-reset">Постимпрессионизм
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1"/>
+                </svg>
+              </button>
+              <ul class="dropdown-menu list-reset">
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Ван Гог</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Сезанн</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Гоген</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Сёра</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Ван Гог</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Сезанн</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Гоген</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Сёра</a></li>
+              </ul>
+            </li>
+            <li class="nav-category__item dropdown">
+              <button class="nav-category__btn btn-reset">Авангард
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1"/>
+                </svg>
+              </button>
+              <ul class="dropdown-menu list-reset">
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Кандинский</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Маринетти</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Малевич</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Пикассо</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Кандинский</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Маринетти</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Малевич</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Пикассо</a></li>
+              </ul>
+            </li>
+            <li class="nav-category__item dropdown">
+              <button class="nav-category__btn btn-reset">Футуризм
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 1L6 6L1 1"/>
+                </svg>
+              </button>
+              <ul class="dropdown-menu list-reset">
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Карра</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Прателла</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Северини</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Балла</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Карра</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Прателла</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Северини</a></li>
+                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Балла</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <form action="" class="search-form" tabindex="0">
+          <label class="search-form__label" aria-label="Поле ввода поиска по сайту">
+            <button class="search-form__btn btn-reset">
+              <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="6.8678" height="1.71695"
+                  transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                  fill="white" />
+              </svg>
+            </button>
+            <input type="text" class="search-form__input" placeholder="Поиск по сайту" name="name">
+          </label>
+        </form>
       </div>
     </div>
   </header>
 
   <main>
-<section class="hero">
-    <div class="container">
+    <section class="hero">
+      <div class="container">
 
-    </div>
-</section>
+      </div>
+    </section>
   </main>
-
+  <script src="script/choices.min.js"></script>
+  <script src="script/focus-visible.js"></script>
+  <script src="script/simplebar.js"></script>
+  <script src="script/script.js"></script>
 </body>
-<script src="script/script.js"></script>
 
 </html>
