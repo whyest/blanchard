@@ -44,6 +44,7 @@ a {
 :root {
   --color-white: #ffffff;
   --color-amethyst: #9D5CD0;
+  --color-biloba: #D1A9F0;
   --color-grey: #333;
   --color-dove: #666;
   --color-helitrope: #C283F3;
@@ -348,7 +349,7 @@ body {
   outline: none;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid var(--color-white);
 }
 
 .search-form__input::-webkit-input-placeholder {
@@ -384,13 +385,20 @@ body {
   z-index: 1;
   padding: 8px 122px 9px 12px;
   margin-bottom: 20px;
-  background: url('/img/dropdown/avangard1.jpg');
-  border: 2px solid transparent;
+  /* background: url('/img/dropdown/avangard1.jpg'); */
+  /* border: 2px solid transparent; */
 }
 
 .dropdown-menu__item:hover {
   background-color: rgba(216, 143, 153, 1);
-  border: 2px solid var(--color-amethyst);
+  outline: 2px solid var(--color-amethyst);
+  z-index: 2;
+}
+
+.dropdown-menu__item:active {
+  /* background-color: rgba(216, 143, 153, 1); */
+  outline: 2px solid var(--color-biloba);
+  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
 }
 
 .dropdown-menu__link {
@@ -427,13 +435,214 @@ body {
 }
 
 .dropdown-menu__link:active {
-  color: var(--color-active);
+  color: var(--color-white);
 }
 
 .dropdown-btn-active {
   color: var(--color-active);
+  transition: transform 0.3 ease-in-out;
+}
+
+.dropdown-btn-active svg {
+  transform: rotate(-180deg) translateY(2px);
+  transition: transform 0.3 ease-in-out;
 }
 
 .dropdown-active {
   display: block;
+}
+
+/* hero */
+.hero {
+  padding-top: 72px;
+  padding-bottom: 0;
+  max-width: 100%;
+}
+
+.hero__content {
+  width: 35%;
+}
+
+.hero__title {
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 83px;
+  color: var(--color-white);
+}
+
+.hero__text {
+  margin: 0 0 92px 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--color-white);
+}
+
+.hero__btn {
+  position: relative;
+  z-index: 1;
+  padding: 14px 32px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--color-white);
+  background-color: var(--color-amethyst);
+  border: 3px solid transparent;
+  border-radius: 100px;
+  transition: border 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hero__btn .hero__btn-text {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-helitrope);
+  border-radius: 50px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hero__btn:focus {
+  outline: none;
+}
+
+.hero__btn:focus-visible::after {
+  opacity: 1;
+}
+
+.hero__btn:hover {
+  border: 3px solid var(--color-biloba);
+}
+
+.hero__btn:active {
+  background-color: var(--color-active);
+  border: 3px solid var(--color-biloba);
+}
+
+.image-container__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  background-size: cover;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-animation: imagesFading 20s infinite;
+  animation: imagesFading 20s infinite;
+}
+
+.image-container {
+  position: relative;
+  margin-top: -568px;
+  width: 100%;
+  min-height: 700px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.image-container__three {
+  background-image: url("../img/hero/hero3.jpg");
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+.image-container__two {
+  background-image: url("../img/hero/hero2.jpg");
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.image-container__one {
+  background-image: url("../img/hero/hero1.jpg");
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes imagesFading {
+  0% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  25% {
+    opacity: 1;
+    width: 110%;
+  }
+
+  53% {
+    opacity: 0;
+    width: 120%;
+  }
+
+  73% {
+    opacity: 1;
+    width: 110%;
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+@keyframes imagesFading {
+  0% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  25% {
+    opacity: 1;
+    width: 110%;
+  }
+
+  53% {
+    opacity: 0;
+    width: 120%;
+  }
+
+  73% {
+    opacity: 1;
+    width: 110%;
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+/* about-us */
+.about-us {
+  padding-top: 81px;
+  padding-bottom: 53px;
+  background-color: red;
+}
+
+.about-us__container {
+  max-width: 68%
+}
+
+.title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 65px;
+}
+
+.about-us__title {
+    margin-bottom: 14px;
+}
+
+.about-us__text {
+    margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
 }
