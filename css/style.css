@@ -62,6 +62,7 @@ a {
   --color-dusty: #999;
   --color-silver: #cacaca;
   --color-baltic: #18171b;
+  --color-gallery: #ececec;
 }
 
 body {
@@ -143,9 +144,11 @@ body {
 .burger .line:nth-child(1) {
   width: 100%;
 }
+
 .burger .line:nth-child(2) {
   width: 80%;
 }
+
 .burger .line:nth-child(3) {
   width: 60%;
 }
@@ -153,9 +156,11 @@ body {
 .burger:not(.active):active .line:nth-child(1) {
   width: 90%;
 }
+
 .burger:not(.active):active .line:nth-child(2) {
   width: 80%;
 }
+
 .burger:not(.active):active .line:nth-child(3) {
   width: 60%;
 }
@@ -172,9 +177,11 @@ body {
 .burger.active .line:nth-child(2) {
   width: 0%;
 }
+
 .burger.active .line:nth-child(1) {
   transform: rotate(45deg) translate(7px, 11px);
 }
+
 .burger.active .line:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -11px);
   width: 100%;
@@ -231,11 +238,11 @@ body {
   opacity: 1;
 }
 
-.header-top__login:hover {
+.header-top__login:hover:not(:focus-visible) {
   color: var(--color-helitrope);
 }
 
-.header-top__login:active {
+.header-top__login:active:not(:focus-visible) {
   color: var(--color-active);
   background-color: transparent;
 }
@@ -286,11 +293,11 @@ body {
   opacity: 1;
 }
 
-.nav__link:hover {
+.nav__link:hover:not(:focus-visible) {
   color: var(--color-helitrope);
 }
 
-.nav__link:active {
+.nav__link:active:not(:focus-visible) {
   color: var(--color-active);
   background-color: transparent;
 }
@@ -344,7 +351,7 @@ body {
   opacity: 1;
 }
 
-.nav-category__btn:hover {
+.nav-category__btn::not(:focus-visible) {
   color: var(--color-amethyst);
 }
 
@@ -535,11 +542,11 @@ search-form__input::-ms-input-placeholder:active {
   opacity: 1;
 }
 
-.dropdown-menu__link:hover {
+.dropdown-menu__link:hover:not(:focus-visible) {
   color: var(--color-white);
 }
 
-.dropdown-menu__link:active {
+.dropdown-menu__link:active:not(:focus-visible) {
   color: var(--color-white);
 }
 
@@ -765,11 +772,11 @@ search-form__input::-ms-input-placeholder:active {
   opacity: 1;
 }
 
-.hero__btn:hover {
+.hero__btn:hover:not(:focus-visible) {
   border: 3px solid var(--color-biloba);
 }
 
-.hero__btn:active {
+.hero__btn:active:not(:focus-visible) {
   background-color: var(--color-active);
   border: 3px solid var(--color-biloba);
 }
@@ -1208,8 +1215,8 @@ search-form__input::-ms-input-placeholder:active {
 .tabs__btn::after {
   position: absolute;
   content: "";
-  left: -10px;
-  top: -10px;
+  left: -10.5px;
+  top: -10.5px;
   width: 64px;
   height: 64px;
   background-color: transparent;
@@ -1375,27 +1382,16 @@ search-form__input::-ms-input-placeholder:active {
   color: var(--color-grey);
 }
 
-.accordion__icon {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  background-color: #bfbfbf;
+.accordion__title.active {
+  color: var(--color-active);
 }
 
-.accordion__icon::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 50%;
-  height: 1px;
-  background-color: #000;
-  transform: translate(-50%, -50%);
+.accordion__control.active {
+  border-top: 1px solid var(--color-active);
+  border-bottom: 1px solid var(--color-active);
 }
 
-.accordion__icon::after {
+/* .accordion__icon::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -1404,25 +1400,49 @@ search-form__input::-ms-input-placeholder:active {
   height: 50%;
   background-color: #000;
   transform: translate(-50%, -50%);
-}
+} */
 
 .accordion__content {
   display: none;
   overflow: hidden;
   will-change: max-height;
+  opacity: 0;
   transition: all 0.3s ease-out;
   box-sizing: content-box;
 }
 
 .accordion__content.open {
   display: block;
+  opacity: 1;
 }
 
 .accordion__icon {
-  transition: transform 0.3s ease-out;
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: var(--color-gallery);
+  transition: transform 0.3s ease-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.accordion__icon::before {
+  content: "";
+  position: absolute;
+  left: 29%;
+  top: 34%;
+  width: 21px;
+  height: 21px;
+  background-image: url('../img/svg/gallery-arrow.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: center;
 }
 
 .accordion__icon.rotate {
-  transform: rotate(180deg);
+  border: 2px solid var(--color-amethyst);
+  background-color: var(--color-biloba);
+  transform: rotate(180deg)
 }
-}}

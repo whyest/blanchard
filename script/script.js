@@ -1,16 +1,20 @@
 
-
 // accordion
 let toggle = document.querySelectorAll(".accordion__control");
+let active = document.querySelectorAll(".accordion__control");
+let title = document.querySelectorAll(".accordion__title");
 let content = document.querySelectorAll(".accordion__content");
 let icons = document.querySelectorAll(".accordion__icon");
 
-for (let i = 0; i < toggle.length; i++) {
+for (let i = 0; i <toggle.length; i++) {
   toggle[i].addEventListener("click", function () {
     icons[i].classList.toggle("rotate");
     content[i].classList.toggle("open");
+    active[i].classList.toggle("active");
+    title[i].classList.toggle("active");
   });
 };
+
 
 // tabs painters
 const tabsPainter = document.querySelectorAll('.accordion__painter-list');
