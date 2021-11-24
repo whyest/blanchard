@@ -220,6 +220,69 @@
   .slider-nav__item {
     height: 280px;
   }
+
+  /* catalogue */
+  .catalog {
+    padding-top: 79px;
+    padding-bottom: 40px;
+  }
+
+  .catalog__title {
+    margin-right: 42px;
+  }
+
+  .catalog__tabs {
+    padding-top: 18px;
+  }
+
+  .tabs__info {
+    max-width: 100%;
+  }
+
+  .catalog__accordion {
+    max-width: 47%;
+  }
+
+  .accordion__painter-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 460px;
+    padding: 27px 0 25px 0;
+  }
+
+  .accordion__painter-item {
+    margin-right: 14%;
+  }
+
+  .content-acc {
+    padding: 25px 0 25px 0;
+  }
+
+  .content-acc__wrapper {
+    width: 48%;
+    padding: 0;
+  }
+
+  .content-acc__text {
+    width: 100%;
+  }
+
+  .content-acc__img {
+    display: inline-flex;
+    width: 189px;
+    height: 130px;
+    margin-right: 24px;
+    background-image: url('../img/catalog/empty-pic1024.jpg');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: cover;
+  }
+
+  .painter__info {
+    width: 95%;
+    line-height: 22px;
+  }
 }
 
 @media (max-width: 922px) {
@@ -301,6 +364,93 @@
   .search-form__btn_close {
     display: flex;
     transform: translate(17px, 9px);
+  }
+
+  .tabs__item:not(:last-child) {
+    margin-right: 23%;
+  }
+
+  .catalog {
+    padding-bottom: 40px;
+  }
+
+  .catalog__tabs {
+    padding-top: 8px;
+  }
+
+  .tabs__wrapper {
+    flex-direction: column;
+  }
+
+  .tabs__info {
+    margin-bottom: 21px;
+  }
+
+  .tabs__container {
+    max-width: 100%;
+    width: 100%;
+    order: 2
+  }
+
+  .catalog__accordion {
+    margin-bottom: 49px;
+    max-width: 100%;
+    order: 1;
+  }
+
+  .painter {
+    max-width: 100%;
+  }
+
+  .painter__img {
+    margin-bottom: 28px;
+  }
+
+  .painter__info {
+    width: 60%;
+  }
+
+  .accordion__painter-list {
+    max-height: 345px;
+    padding: 27px 0 25px 0;
+  }
+
+  .accordion__painter-item {
+    margin-right: 9%;
+  }
+
+  .content-acc__wrapper {
+    padding: 40px 0;
+  }
+
+  .content-acc__img {
+    display: inline-flex;
+    width: 275px;
+    height: 189px;
+    margin-right: 24px;
+    background-image: url('../img/catalog/empty-pic768.jpg');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 770px) {
+  .catalog__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .catalog__title {
+    margin-bottom: 30px;
+  }
+
+  .accordion__painter-item {
+    margin-right: 15%;
+  }
+
+  .accordion__painter-list {
+    max-height: 440px;
   }
 }
 
@@ -558,5 +708,135 @@
     order: 3;
   }
 
-}
+  .catalog {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
+  .catalog__tabs {
+    margin-bottom: 5px;
+  }
+
+  .catalog__title {
+    margin-bottom: 4px;
+  }
+
+  .tabs__info {
+    display: none;
+  }
+
+  .tabs__item:not(:last-child) {
+    margin-right: 20%;
+  }
+
+  .tabs__btn {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border: 2px solid transparent;
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: center center;
+    z-index: 2;
+  }
+
+  .tabs__btn::after {
+    position: absolute;
+    content: "";
+    left: -8px;
+    top: -8px;
+    bottom: -8px;
+    right: -8px;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: 2px solid var(--color-active);
+    border-radius: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .tabs__btn-active::after {
+    opacity: 1;
+  }
+
+  .accordion__control {
+    padding: 20px 0;
+  }
+
+  .accordion__title {
+    font-size: 18px;
+  }
+
+  .accordion__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .accordion__icon::before {
+    content: "";
+    position: absolute;
+    left: 29%;
+    top: 33%;
+    width: 11px;
+    height: 11px;
+    border: 2px solid transparent;
+    background-image: url(../img/svg/gallery-arrow320.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-origin: center;
+  }
+
+  .accordion__painter-list {
+    max-height: 815px;
+    padding: 19px 0 21px 0;
+  }
+
+  .painter__img {
+    margin-bottom: 17px;
+  }
+
+  .painter__name {
+    margin-bottom: 14px;
+  }
+
+  .painter__info {
+    width: 98%;
+    line-height: 32px;
+  }
+
+  .content-acc {
+    padding: 25px 0 25px 0;
+  }
+
+  .content-acc__wrapper {
+    padding: 0;
+    width: 65%;
+  }
+
+  .content-acc__img {
+    display: inline-flex;
+    width: 96px;
+    height: 129px;
+    margin-right: 25px;
+    background-image: url('../img/catalog/empty-pic320.jpg');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: cover;
+  }
+
+  .content-acc__title {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--color-grey);
+  }
+
+  .content-acc__text {
+      margin-bottom: 5px;
+  }
+
 }

@@ -1,20 +1,19 @@
 
 // accordion
-let toggle = document.querySelectorAll(".accordion__control");
-let active = document.querySelectorAll(".accordion__control");
-let title = document.querySelectorAll(".accordion__title");
-let content = document.querySelectorAll(".accordion__content");
-let icons = document.querySelectorAll(".accordion__icon");
+var acc = document.getElementsByClassName("accordion__control");
+var i;
 
-for (let i = 0; i <toggle.length; i++) {
-  toggle[i].addEventListener("click", function () {
-    icons[i].classList.toggle("rotate");
-    content[i].classList.toggle("open");
-    active[i].classList.toggle("active");
-    title[i].classList.toggle("active");
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
   });
-};
-
+}
 
 // tabs painters
 const tabsPainter = document.querySelectorAll('.accordion__painter-list');
@@ -27,9 +26,9 @@ if (tabsPainter) {
       el.addEventListener('click', (e) => {
         e.preventDefault();
         painterLink.forEach(el => {
-          el.classList.remove('accordion__painter-link--active')
+          el.classList.remove('accordion__painter-link_active')
         });
-        e.target.classList.add('accordion__painter-link--active');
+        e.target.classList.add('accordion__painter-link_active');
         painter.forEach(el => {
           el.classList.remove('painter-content-active')
         });
