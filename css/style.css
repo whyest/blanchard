@@ -2219,6 +2219,7 @@ search-form__input::-ms-input-placeholder:active {
 }
 
 .category__caption_price {
+  display: flex;
   font-weight: 700;
   font-size: 16px;
   line-height: 32px;

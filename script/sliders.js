@@ -137,22 +137,22 @@ const editionSlider = new Swiper(".edition__slider", {
   breakpoints: {
     320: {
       slidesPerView: 2,
-      slidesPerGroup: 1,
+      slidesPerGroup: 2,
       spaceBetween: 15,
     },
     767: {
       slidesPerView: 2,
-      slidesPerGroup: 1,
+      slidesPerGroup: 2,
       spaceBetween: 34,
     },
     1024: {
       slidesPerView: 2,
-      slidesPerGroup: 1,
+      slidesPerGroup: 2,
       spaceBetween: 49,
     },
     1200: {
       slidesPerView: 3,
-      slidesPerGroup: 1,
+      slidesPerGroup: 3,
       spaceBetween: 50,
     }
   }
