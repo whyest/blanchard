@@ -2506,7 +2506,7 @@ search-form__input::-ms-input-placeholder:active {
   transition: all 0.3s ease 0s;
 }
 
-.partners__img:hover {
+.partners__link:hover .partners__img {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
 }
