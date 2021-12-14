@@ -191,4 +191,28 @@ document.addEventListener("DOMContentLoaded", function () {
         this.classList.toggle('is-active');
     });
 })();
+
+// tooltip
+tippy('.tooltip-marker1', {
+  content: 'Пример современных тенденций современная методология разработки',
+  theme: 'purple',
+  trigger: 'click',
+  animation: 'perspective',
+  maxWidth: 264,
+});
+tippy('.tooltip-marker2', {
+  content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
+  theme: 'purple',
+  trigger: 'click',
+  animation: 'perspective',
+  maxWidth: 264,
+});
+tippy('.tooltip-marker3', {
+  content: 'В стремлении повысить качество',
+  theme: 'purple',
+  trigger: 'click',
+  animation: 'perspective',
+  maxWidth: 242,
+});
+
 })

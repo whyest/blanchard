@@ -157,3 +157,39 @@ const editionSlider = new Swiper(".edition__slider", {
     }
   }
 });
+
+// partners slider
+const partnersSlider = new Swiper(".partners__slider", {
+  slidesPerView: 3,
+  slidesPerGroup: 1,
+  spaceBetween: 50,
+  navigation: {
+    nextEl: ".partners__button-next",
+    prevEl: ".partners__button-prev"
+  },
+  simulateTouch: true,
+  slideToClickedSlide: true,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 32,
+    },
+    992: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 50,
+    },
+    1200: {
+      slidesPerView: 3,
+      slidesPerGroup: 1,
+      spaceBetween: 50,
+    }
+  }
+});
