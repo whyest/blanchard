@@ -589,7 +589,7 @@
     -moz-column-count: 3;
     column-count: 3;
     -moz-column-gap: 20px;
-    column-gap: 11px;
+    column-gap: 9px;
   }
 
   .category__caption {
@@ -709,7 +709,7 @@
   }
 
   .edition {
-    min-height: 300px;
+    min-height: 1084px;
   }
 
   .edition__left {
@@ -723,11 +723,11 @@
   } */
 
   .edition__slider {
-    height: 307px;
+    height: 450px;
   }
 
   .category__container {
-    max-width: 460px;
+    max-width: 490px;
   }
 
   .checkbox-wrap {
@@ -805,6 +805,9 @@
   }
 
   .category__caption {
+    position: relative;
+    left: auto;
+    top: auto;
     font-size: 16px;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -893,6 +896,37 @@
 
   .form-price {
     width: 95%;
+  }
+
+  .contacts__wrapper {
+    display: none;
+  }
+  .contacts__map-container {
+    border: none;
+  }
+  .contacts__wrapper_hidden {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.contacts__map {
+    background-color: lightgrey;
+    width: 100%;
+    height: 180px;
+
+}
+  .contacts__content {
+    flex-direction: column-reverse;
+    border: none;
+  }
+  .section__left {
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+  }
+  .contacts .container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -1286,6 +1320,7 @@
   }
 
   .edition {
+    min-height: 400px;
     padding-top: 50px;
   }
 
@@ -1304,6 +1339,7 @@
   .edition__slider {
     overflow: visible;
     padding: 0;
+    height: 307px;
   }
 
   .right-edition__nav {

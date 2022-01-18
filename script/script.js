@@ -187,6 +187,8 @@ document.addEventListener("DOMContentLoaded", function () {
   (() => {
     const checkBtn = document.querySelector('.js-check-heading');
     
+    // checkBtn.addEventListener('click', (e) => {
+    //   e.currentTarget.classList.toggle('is-active');
     checkBtn.addEventListener('click', function () {
         this.classList.toggle('is-active');
     });
@@ -214,5 +216,57 @@ tippy('.tooltip-marker3', {
   animation: 'perspective',
   maxWidth: 242,
 });
+
+// inputMask
+let inputs = document.querySelectorAll('input[type="tel"]');
+let im = new Inputmask('+7 (999) 999-99-99');
+im.mask(inputs);
+
+// just validate
+new JustValidate('.js-form', {
+  rules: {
+      name: {
+        required: true
+      },
+      tel: {
+          required: true,
+          tel: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+  },
+  colorWrong: '#ff5c00',
+  messages: {
+    name: 'Как вас зовут?',
+    tel: 'Укажите ваш телефон',
+    email: 'Укажите ваш email',
+  },
+  submitHandler: function (form, values, ajax) {
+
+      ajax({
+        url: 'https://just-validate-api.herokuapp.com/submit',
+        method: 'POST',
+        data: values,
+        async: true,
+        callback: function(response)  {
+          console.log(response)
+        }
+      });
+    },
+  });
+
+
+// (() => {
+//   const tooltipBtn = document.querySelector('.tooltip');
+  
+//   tooltipBtn.addEventListener('click', function () {
+//       this.classList.add('is-active');
+//   });
+// })();
+
+// Yandex Map
+   
 
 })
