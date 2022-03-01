@@ -122,12 +122,12 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // tabs counter
-  const tabs = document.querySelector('.tabs');
-  const tabsBtn = document.querySelectorAll('.tabs__btn');
+  const tabs = document.querySelector('.catalog-tabs');
+  const tabsBtn = document.querySelectorAll('.catalog-tabs__btn');
   const tabsContent = document.querySelectorAll('.tabs__content');
   if (tabs) {
     tabs.addEventListener('click', (e) => {
-      if (e.target.classList.contains('tabs__btn')) {
+      if (e.target.classList.contains('catalog-tabs__btn')) {
         const tabsPath = e.target.dataset.tabsPath;
         tabsHandler(tabsPath);
       }
@@ -135,9 +135,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const tabsHandler = (path) => {
       tabsBtn.forEach(el => {
-        el.classList.remove('tabs__btn-active')
+        el.classList.remove('catalog-tabs__btn-active')
       })
-      document.querySelector(`[data-tabs-path="${path}"]`).classList.add('tabs__btn-active')
+      document.querySelector(`[data-tabs-path="${path}"]`).classList.add('catalog-tabs__btn-active')
 
       tabsContent.forEach(el => {
         el.classList.remove('tabs__content-active')
@@ -184,14 +184,13 @@ document.addEventListener("DOMContentLoaded", function () {
   //   }
 
   // categories
-  (() => {
-    const checkBtn = document.querySelector('.js-check-heading');
-    
-    // checkBtn.addEventListener('click', (e) => {
-    //   e.currentTarget.classList.toggle('is-active');
-    checkBtn.addEventListener('click', function () {
-        this.classList.toggle('is-active');
-    });
+
+(() => {
+  const checkBtn = document.querySelector('.js-check-heading');
+  
+  checkBtn.addEventListener('click', function () {
+      this.classList.toggle('is-active');
+  });
 })();
 
 // tooltip
@@ -267,6 +266,35 @@ new JustValidate('.js-form', {
 // })();
 
 // Yandex Map
-   
+ymaps.ready(init);
+
+function init() {
+  // Создание карты.
+  var myMap = new ymaps.Map("map", {
+    // Координаты центра карты.
+    // Порядок по умолчанию: «широта, долгота».
+    // Чтобы не определять координаты центра карты вручную,
+    // воспользуйтесь инструментом Определение координат.
+    center: [55.75846806898367, 37.60108849999989],
+    // Уровень масштабирования. Допустимые значения:
+    // от 0 (весь мир) до 19.
+    zoom: 14
+  });
+  // Создание геообъекта с типом точка (метка).
+  var myGeoObject = new ymaps.GeoObject({
+    geometry: {
+      type: "Point", // тип геометрии - точка
+      coordinates: [55.75846806898367, 37.60108849999989] // координаты точки
+    }
+  });
+  var myPlacemark = new ymaps.Placemark([55.75846806898367, 37.60108849999989], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/svg/placemark.svg',
+    iconImageSize: [20, 20],
+    iconImageOffset: [-20, 0]
+  });
+  // Размещение геообъекта на карте.
+  myMap.geoObjects.add(myPlacemark);
+} 
 
 })

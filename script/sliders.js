@@ -124,7 +124,7 @@ const eventSlider = new Swiper(".event__slider", {
 });
 
 // edition slider
-const editionSlider = new Swiper(".edition__slider", {
+const editionSlider = new Swiper(".edition-slider", {
   navigation: {
     nextEl: ".right-edition__next",
     prevEl: ".right-edition__prev"

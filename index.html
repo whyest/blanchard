@@ -14,41 +14,6 @@
   <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
-  </script>
-  <script type="text/javascript">
-    ymaps.ready(init);
-
-    function init() {
-      // Создание карты.
-      var myMap = new ymaps.Map("map", {
-        // Координаты центра карты.
-        // Порядок по умолчанию: «широта, долгота».
-        // Чтобы не определять координаты центра карты вручную,
-        // воспользуйтесь инструментом Определение координат.
-        center: [55.75846806898367, 37.60108849999989],
-        // Уровень масштабирования. Допустимые значения:
-        // от 0 (весь мир) до 19.
-        zoom: 14
-      });
-      // Создание геообъекта с типом точка (метка).
-      var myGeoObject = new ymaps.GeoObject({
-        geometry: {
-          type: "Point", // тип геометрии - точка
-          coordinates: [55.75846806898367, 37.60108849999989] // координаты точки
-        }
-      });
-      var myPlacemark = new ymaps.Placemark([55.75846806898367, 37.60108849999989], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/svg/placemark.svg',
-        iconImageSize: [20, 20],
-        iconImageOffset: [-20, 0]
-      });
-      // Размещение геообъекта на карте.
-      myMap.geoObjects.add(myPlacemark);
-    }
-
-  </script>
 </head>
 
 <body>
@@ -90,7 +55,7 @@
           </a>
         </div>
         <div class="search-margin"></div>
-        <form action="" class="search-form" tabindex="0">
+        <form action="/" class="search-form" tabindex="0">
           <button class="search-form__btn btn-reset" tabindex="-1">
             <svg class="search-form__icon" width="23" height="22" viewBox="0 0 23 22" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +67,7 @@
             </svg>
           </button>
           <input type="text" class="search-form__input" placeholder="Поиск по сайту" name="name" tabindex="0">
-          <button class="search-form__btn_close btn-reset" tabindex="-1">
+          <button class="search-form__btn search-form__btn_close btn-reset" tabindex="-1">
             <svg class="close-btn" width="29" height="29" viewBox="0 0 29 29" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <g opacity="0.7">
@@ -327,154 +292,154 @@
             </button>
           </div>
           <div class="swiper gallery-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide slider-nav__item slider-nav__item_1" tabindex="0">
+            <div class="swiper-wrapper gallery-nav">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery1-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery1.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery1.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_2" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery2-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery2.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery2.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_3" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery3-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery3.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery3.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_4" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery4-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery4.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery4.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_5" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery5-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery5.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery5.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_6" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery6-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery6.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery6.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_7" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery7-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery7.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery7.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_8" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery8-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery8.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery8.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_9" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery9-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery9.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery9.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_10" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery10-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery10.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery10.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_11" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery11-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery11.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery11.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_12" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery12-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery12.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery12.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_13" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery13-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery13.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery13.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_14" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery14-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery14.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery14.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_15" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery15-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery15.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery15.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_16" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery16-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery16.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery16.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_17" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery17-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery17.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery17.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_18" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery18-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery18.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery18.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_19" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery19-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery19.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery19.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_20" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery20-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery20.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery20.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_21" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery21-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery21.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery21.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_22" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery22-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery22.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery22.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_23" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery23-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery23.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery23.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
-              <div class="swiper-slide slider-nav__item slider-nav__item_24" tabindex="0">
+              <div class="swiper-slide gallery-nav__item" tabindex="0">
                 <picture>
                   <source srcset="img/gallery/gallery24-mob.jpg" media="(max-width: 530px)">
-                  <img src="img/gallery/gallery24.jpg" class="slider-nav__item_img" alt="Картина Казимира Малевича">
+                  <img src="img/gallery/gallery24.jpg" class="gallery-nav__item-img" alt="Картина Казимира Малевича">
                 </picture>
               </div>
             </div>
           </div>
-          <div class="gallery__content_tablet">
+          <div class="gallery__content-tablet">
             <p class="gallery__descr">
               Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества скачиваний <a href="#"
                 class="gallery__link">авторизуйтесь</a>, либо
@@ -484,1068 +449,1078 @@
         </div>
       </div>
     </section>
-    <section class="catalog container catalog__container" id="catalog">
+    <section class="catalog container" id="catalog">
       <div class="catalog__top">
         <h2 class="title catalog__title">Каталог</h2>
-        <ul class="catalog__tabs tabs list-reset">
-          <li class="tabs__item">
-            <button class="tabs__btn btn-reset btn_france" data-tabs-path="france"></button>
+        <ul class="catalog-tabs list-reset">
+          <li class="catalog-tabs__item">
+            <button class="catalog-tabs__btn btn-reset catalog-tabs__btn_france" data-tabs-path="france"></button>
           </li>
-          <li class="tabs__item">
-            <button class="tabs__btn btn-reset btn_germany" data-tabs-path="germany"></button>
+          <li class="catalog-tabs__item">
+            <button class="catalog-tabs__btn btn-reset catalog-tabs__btn_germany" data-tabs-path="germany"></button>
           </li>
-          <li class="tabs__item">
-            <button class="tabs__btn btn-reset btn_italy tabs__btn-active" data-tabs-path="italy"></button>
+          <li class="catalog-tabs__item">
+            <button class="catalog-tabs__btn btn-reset catalog-tabs__btn_italy catalog-tabs__btn-active" data-tabs-path="italy"></button>
           </li>
-          <li class="tabs__item">
-            <button class="tabs__btn btn-reset btn_russia" data-tabs-path="russia"></button>
+          <li class="catalog-tabs__item">
+            <button class="catalog-tabs__btn btn-reset catalog-tabs__btn_russia" data-tabs-path="russia"></button>
           </li>
-          <li class="tabs__item">
-            <button class="tabs__btn btn-reset btn_belgium" data-tabs-path="belgium"></button>
+          <li class="catalog-tabs__item">
+            <button class="catalog-tabs__btn btn-reset catalog-tabs__btn_belgium" data-tabs-path="belgium"></button>
           </li>
         </ul>
       </div>
-      <div class="tabs__content" data-tabs-target="france">
-        <p class="tabs__info">
-          Франция подарила миру множество ярких самобытных художников. И&nbsp;это не&nbsp;только импрессионисты,
-          пошатнувшие многовековые традиции. Страна соседствует с&nbsp;колыбелью живописи&nbsp;&mdash; прекрасной
-          Италией. Поэтому неудивительно, что эпоха Возрождения оказала большое влияние на&nbsp;творческих людей.
-          Но&nbsp;национальной оригинальной школы не&nbsp;сформировалось, Франция не&nbsp;может похвастаться мастерами,
-          превосходящими талантом знаменитого Леонардо да&nbsp;Винчи или Караваджо. Свой вклад в&nbsp;мировое искусство
-          уроженцы этой солнечной страны внесли в&nbsp;другое время.
-        </p>
-        <div class="tabs__wrapper">
-          <div class="tabs__container">
-            <div class="painter painter-content-active" data-tabs-target="Unknown_Artist1">
-              <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
-              <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-              <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
-                есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="painter__link">В галерею</a>
+      <div class="tabs">
+        <div class="tabs__content" data-tabs-target="france">
+          <p class="tabs__info">
+            Франция подарила миру множество ярких самобытных художников. И&nbsp;это не&nbsp;только импрессионисты,
+            пошатнувшие многовековые традиции. Страна соседствует с&nbsp;колыбелью живописи&nbsp;&mdash; прекрасной
+            Италией. Поэтому неудивительно, что эпоха Возрождения оказала большое влияние на&nbsp;творческих людей.
+            Но&nbsp;национальной оригинальной школы не&nbsp;сформировалось, Франция не&nbsp;может похвастаться мастерами,
+            превосходящими талантом знаменитого Леонардо да&nbsp;Винчи или Караваджо. Свой вклад в&nbsp;мировое искусство
+            уроженцы этой солнечной страны внесли в&nbsp;другое время.
+          </p>
+          <div class="tabs__wrapper">
+            <div class="tabs__container">
+              <div class="painter painter-content-active" data-tabs-target="Unknown_Artist1">
+                <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
+                <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+                <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
+                  есть на&nbsp;что посмотреть!</p>
+                <a href="#gallery" class="painter__link">В галерею</a>
+              </div>
+              <div class="painter" data-tabs-target="Unknown_Artist2">
+                <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
+                <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+                <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
+                  есть на&nbsp;что посмотреть!</p>
+                <a href="#gallery" class="painter__link">В галерею</a>
+              </div>
+              <div class="painter" data-tabs-target="Unknown_Artist3">
+                <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
+                <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+                <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
+                  есть на&nbsp;что посмотреть!</p>
+                <a href="#gallery" class="painter__link">В галерею</a>
+              </div>
             </div>
-            <div class="painter" data-tabs-target="Unknown_Artist2">
-              <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
-              <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-              <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
-                есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="painter__link">В галерею</a>
+            <div class="catalog__accordion">
+              <ul class="accordion-list list-reset">
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <ul class="accordion__painter-list list-reset">
+                      <li class="accordion__painter-item"><a href="#"
+                          class="accordion__painter-link accordion__painter-link--active accordion__painter-link_active"
+                          data-tabs-path="Unknown_Artist1">Неизвестный художник</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist2">Неизвестный художник</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist3">Неизвестный художник</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1500 по&nbsp;1599&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1600 по&nbsp;1699&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1700 по&nbsp;1799&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1800 по&nbsp;1899&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1900 по&nbsp;1999&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;2000&nbsp;г.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div class="painter" data-tabs-target="Unknown_Artist3">
-              <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
-              <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-              <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
-                есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="painter__link">В галерею</a>
-            </div>
-          </div>
-          <div class="catalog__accordion">
-            <ul class="accordion-list list-reset">
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <ul class="accordion__painter-list list-reset">
-                    <li class="accordion__painter-item"><a href="#"
-                        class="accordion__painter-link accordion__painter-link--active accordion__painter-link_active"
-                        data-tabs-path="Unknown_Artist1">Неизвестный художник</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist2">Неизвестный художник</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist3">Неизвестный художник</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1500 по&nbsp;1599&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1600 по&nbsp;1699&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1700 по&nbsp;1799&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1800 по&nbsp;1899&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1900 по&nbsp;1999&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;2000&nbsp;г.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
-      <div class="tabs__content" data-tabs-target="germany">
-        <p class="tabs__info">
-          Люди в&nbsp;Германии очень гордятся историей своей страны. Здесь жили и&nbsp;работали в&nbsp;разное время
-          многие известные живописцы. К&nbsp;ним относятся такие имена как Франц Крюгер, Генрих Цилле, Альбрехт Дюрер
-          и&nbsp;многие другие.
-          Альбрехт Дюрер считается основателем немецкого Ренессанса в&nbsp;образном искусстве. Он&nbsp;родился
-          в&nbsp;семье ювелира 21&nbsp;мая 1471. С&nbsp;13&nbsp;лет он&nbsp;учился у&nbsp;алтарного художника,
-          иллюстратора и&nbsp;портретиста Михаэля Вольгемута.
-        </p>
-        <div class="tabs__wrapper">
-          <div class="tabs__container">
-            <div class="painter painter-content-active" data-tabs-target="Unknown_Artist4">
-              <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
-              <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-              <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
-                есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="painter__link">В галерею</a>
+      <div class="tabs">
+        <div class="tabs__content" data-tabs-target="germany">
+          <p class="tabs__info">
+            Люди в&nbsp;Германии очень гордятся историей своей страны. Здесь жили и&nbsp;работали в&nbsp;разное время
+            многие известные живописцы. К&nbsp;ним относятся такие имена как Франц Крюгер, Генрих Цилле, Альбрехт Дюрер
+            и&nbsp;многие другие.
+            Альбрехт Дюрер считается основателем немецкого Ренессанса в&nbsp;образном искусстве. Он&nbsp;родился
+            в&nbsp;семье ювелира 21&nbsp;мая 1471. С&nbsp;13&nbsp;лет он&nbsp;учился у&nbsp;алтарного художника,
+            иллюстратора и&nbsp;портретиста Михаэля Вольгемута.
+          </p>
+          <div class="tabs__wrapper">
+            <div class="tabs__container">
+              <div class="painter painter-content-active" data-tabs-target="Unknown_Artist4">
+                <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
+                <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+                <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
+                  есть на&nbsp;что посмотреть!</p>
+                <a href="#gallery" class="painter__link">В галерею</a>
+              </div>
+              <div class="painter" data-tabs-target="Unknown_Artist5">
+                <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
+                <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+                <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
+                  есть на&nbsp;что посмотреть!</p>
+                <a href="#gallery" class="painter__link">В галерею</a>
+              </div>
+              <div class="painter" data-tabs-target="Unknown_Artist6">
+                <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
+                <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+                <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
+                  есть на&nbsp;что посмотреть!</p>
+                <a href="#gallery" class="painter__link">В галерею</a>
+              </div>
             </div>
-            <div class="painter" data-tabs-target="Unknown_Artist5">
-              <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
-              <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-              <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
-                есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="painter__link">В галерею</a>
+            <div class="catalog__accordion">
+              <ul class="accordion-list list-reset">
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <ul class="accordion__painter-list list-reset">
+                      <li class="accordion__painter-item"><a href="#"
+                          class="accordion__painter-link accordion__painter-link--active accordion__painter-link_active"
+                          data-tabs-path="Unknown_Artist4">Неизвестный художник</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist5">Неизвестный художник</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist6">Неизвестный художник</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1500 по&nbsp;1599&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1600 по&nbsp;1699&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1700 по&nbsp;1799&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1800 по&nbsp;1899&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1900 по&nbsp;1999&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;2000&nbsp;г.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div class="painter" data-tabs-target="Unknown_Artist6">
-              <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
-              <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-              <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
-                есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="painter__link">В галерею</a>
-            </div>
-          </div>
-          <div class="catalog__accordion">
-            <ul class="accordion-list list-reset">
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <ul class="accordion__painter-list list-reset">
-                    <li class="accordion__painter-item"><a href="#"
-                        class="accordion__painter-link accordion__painter-link--active accordion__painter-link_active"
-                        data-tabs-path="Unknown_Artist4">Неизвестный художник</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist5">Неизвестный художник</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist6">Неизвестный художник</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1500 по&nbsp;1599&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1600 по&nbsp;1699&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1700 по&nbsp;1799&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1800 по&nbsp;1899&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1900 по&nbsp;1999&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;2000&nbsp;г.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
-      <div class="tabs__content tabs__content-active" data-tabs-target="italy">
-        <p class="tabs__info">
-          Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
-          политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего
-          лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей
-          день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
-        </p>
-        <div class="tabs__wrapper">
-          <div class="tabs__container">
-            <div class="painter" data-tabs-target="Benedetto_di_Bindo">
-              <img class="painter__img" src="img/painter/italy/Benedetto_di_Bindo_-_Virgin_of_Humility.jpeg"
-                alt="Бенедетто ди Биндо">
-              <h3 class="painter__name">Бенедетто ди Биндо</h3>
-              <span class="painter__years-life">ок. 1380—85 — 19 сентября 1417</span>
-              <p class="painter__info">Бенедетто ди&nbsp;Биндо остался в&nbsp;истории искусства как сиенский художник,
-                так
-                сказать, &laquo;второго ряда&raquo;, несмотря на&nbsp;то, что за&nbsp;свою короткую жизнь
-                он&nbsp;выполнил
-                ряд весьма престижных заказов, включая работы в&nbsp;Сиенском соборе (работы в&nbsp;главном соборе
-                республики второстепенным художникам не&nbsp;поручались). Обучение он&nbsp;прошёл у&nbsp;Таддео
-                ди&nbsp;Бартоло, крупного сиенского мастера поздней готики, в&nbsp;боттеге которого Бенедетто трудился
-                вместе с&nbsp;Грегорио ди&nbsp;Чекко. Наибольшее влияние на&nbsp;его творчество оказали работы Симоне
-                Мартини, в&nbsp;частности в&nbsp;выборе колорита, а&nbsp;тонко проработанные лица его персонажей
-                напоминают произведения Джованни да&nbsp;Милано.</p>
+      <div class="tabs">
+        <div class="tabs__content tabs__content-active" data-tabs-target="italy">
+          <p class="tabs__info">
+            Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+            политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего
+            лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей
+            день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
+          </p>
+          <div class="tabs__wrapper">
+            <div class="tabs__container">
+              <div class="painter" data-tabs-target="Benedetto_di_Bindo">
+                <img class="painter__img" src="img/painter/italy/Benedetto_di_Bindo_-_Virgin_of_Humility.jpeg"
+                  alt="Бенедетто ди Биндо">
+                <h3 class="painter__name">Бенедетто ди Биндо</h3>
+                <span class="painter__years-life">ок. 1380—85 — 19 сентября 1417</span>
+                <p class="painter__info">Бенедетто ди&nbsp;Биндо остался в&nbsp;истории искусства как сиенский художник,
+                  так
+                  сказать, &laquo;второго ряда&raquo;, несмотря на&nbsp;то, что за&nbsp;свою короткую жизнь
+                  он&nbsp;выполнил
+                  ряд весьма престижных заказов, включая работы в&nbsp;Сиенском соборе (работы в&nbsp;главном соборе
+                  республики второстепенным художникам не&nbsp;поручались). Обучение он&nbsp;прошёл у&nbsp;Таддео
+                  ди&nbsp;Бартоло, крупного сиенского мастера поздней готики, в&nbsp;боттеге которого Бенедетто трудился
+                  вместе с&nbsp;Грегорио ди&nbsp;Чекко. Наибольшее влияние на&nbsp;его творчество оказали работы Симоне
+                  Мартини, в&nbsp;частности в&nbsp;выборе колорита, а&nbsp;тонко проработанные лица его персонажей
+                  напоминают произведения Джованни да&nbsp;Милано.</p>
+              </div>
+  
+              <div class="painter" data-tabs-target="Bergognone">
+                <img class="painter__img" src="img/painter/italy/Bergognone.jpeg" alt="Бергоньоне, Амброджо">
+                <h3 class="painter__name">Бергоньоне, Амброджо</h3>
+                <span class="painter__years-life">1453 - 1523</span>
+                <p class="painter__info">Прозвище говорит о&nbsp;его тяготении к&nbsp;бургундской школе, по&nbsp;манере
+                  ему
+                  близок Винченцо Фоппа. Испытал влияние Леонардо да&nbsp;Винчи. Наиболее известен работами
+                  1486&ndash;1494&nbsp;в монастырской обители картезианцев Чертоза ди&nbsp;Павия. Позднее работал
+                  в&nbsp;Милане в&nbsp;базилике Сант-Эусторджо и&nbsp;церкви Сан-Сатиро, после 1497&nbsp;&mdash;
+                  в&nbsp;Лоди, в&nbsp;1512&nbsp;&mdash; в&nbsp;Бергамо, незадолго до&nbsp;смерти&nbsp;&mdash; снова
+                  в&nbsp;Милане, в&nbsp;базилике Сан-Симпличано.</p>
+              </div>
+  
+              <div class="painter" data-tabs-target="Bissolo">
+                <img class="painter__img" src="img/painter/italy/Bissolo_Marriage_of_St._Catherine.jpg"
+                  alt="Биссоло, Франческо">
+                <h3 class="painter__name">Биссоло, Франческо</h3>
+                <span class="painter__years-life">1470 - 20 апреля 1554</span>
+                <p class="painter__info">Сын художника. Ученик Джованни Беллини. С&nbsp;1490 переехал в&nbsp;мастерскую
+                  Беллини. С&nbsp;1492 по&nbsp;1530 год работал в&nbsp;Венеции. Помогал учителю в&nbsp;работе над
+                  украшением
+                  Большого зала Совета Дворца дожей (Венеция). Принимал участие в&nbsp;создании украшений Церкви Иль
+                  Реденторе в&nbsp;Венеции. Художник эпохи Возрождения. В&nbsp;своём творчестве подражал Джорджоне. Работы
+                  художника хранятся ныне во&nbsp;многих музеях мира. В&nbsp;санкт-петербургском Эрмитаже находится его
+                  картина &laquo;Богоматерь с&nbsp;Младенцем Христом&raquo;. В&nbsp;Британской Национальной
+                  галерее&nbsp;&mdash; &laquo;Мадонна с&nbsp;Младенцем со&nbsp;святыми и&nbsp;донатором&raquo;. Ряд его
+                  полотен находится в&nbsp;музеях Варшавы, Лос-Анджелеса (Музей Нортона Саймона и&nbsp;Los Angeles County
+                  Museum of&nbsp;Art), Дэйтоновском институте искусств (штат Огайо, США) и&nbsp;др.</p>
+              </div>
+  
+              <div class="painter" data-tabs-target="Giovanni_Antonio_Boltraffio">
+                <img class="painter__img" src="img/painter/italy/Giovanni_Antonio_Boltraffio.jpeg"
+                  alt="Джованни Антонио Больтраффио">
+                <h3 class="painter__name">Джованни Антонио Больтраффио</h3>
+                <span class="painter__years-life">1466 или 1467 — 1516</span>
+                <p class="painter__info">Итальянский художник Высокого Возрождения. Его первое произведение
+                  &laquo;Воскресение Христа, святой Леонард и&nbsp;святая Лючия&raquo; выполнено в&nbsp;1491 году
+                  совместно
+                  с&nbsp;Марко д&rsquo;Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным художником
+                  Лодовико
+                  Моро и&nbsp;славился своими психологическими портретами.</p>
+              </div>
+  
+              <div class="painter" data-tabs-target="Francesco_Bonsignori">
+                <img class="painter__img" src="img/painter/italy/Francesco_Bonsignori.jpeg" alt="Франческо Бонсиньори">
+                <h3 class="painter__name">Франческо Бонсиньори</h3>
+                <span class="painter__years-life">ок. 1460 — 2 июля 1519</span>
+                <p class="painter__info">Итальянский живописец, писавший картины в&nbsp;стиле Ренессанса. Среди известных
+                  творений этого периода самыми ранними произведениями художника являются полотна &laquo;Мадонна
+                  со&nbsp;спящим младенцем&raquo; 1483 года и&nbsp;&laquo;Алтарь Даль Бово&raquo;, или &laquo;Мадонна
+                  на&nbsp;троне с&nbsp;предстоящими святыми и&nbsp;донатором Альтабеллой Авогадро&raquo; 1484&nbsp;года,
+                  которые ныне входят в&nbsp;собрание Общественного музея Вероны.</p>
+              </div>
+  
+              <div class="painter" data-tabs-target="Raffaello_Botticini">
+                <img class="painter__img" src="img/painter/italy/Raffaello_Botticini.jpeg" alt="Рафаэль Боттичини">
+                <h3 class="painter__name">Рафаэль Боттичини</h3>
+                <span class="painter__years-life">11 сентября 1477 — известен до 1520 г</span>
+                <p class="painter__info">Итальянский художник. Рафаэлло принадлежал к&nbsp;флорентийской артистической
+                  династии. Рафаэлло Боттичини был почти забыт художественной критикой; главную роль в&nbsp;его
+                  &laquo;возрождении&raquo; принадлежит итальянскому искусствоведу Федерико Дзери, опубликовавшему
+                  в&nbsp;1968 году работу о&nbsp;художнике; в&nbsp;ней Дзери смог восстановить хронологию его творчества
+                  и&nbsp;более точно атрибутировать некоторые произведения.</p>
+              </div>
+  
+              <div class="painter" data-tabs-target="Bartolommeo">
+                <img class="painter__img" src="img/painter/italy/Bartolommeo.jpeg" alt="Брамантино">
+                <h3 class="painter__name">Брамантино</h3>
+                <span class="painter__years-life">ок. 1465 — 1530</span>
+                <p class="painter__info">Итальянский художник и&nbsp;архитектор. Брамантино сформировался под влиянием
+                  Бутиноне и&nbsp;графического стиля Падуи и&nbsp;Феррары. Впоследствии он&nbsp;многому научился
+                  у&nbsp;Браманте, у&nbsp;которого долгое время состоял помощником (чем и&nbsp;объясняется его прозвище
+                  Брамантино&nbsp;&mdash; букв. &laquo;Маленький Браманте&raquo;) и&nbsp;у&nbsp;которого перенял любовь
+                  к&nbsp;монументальным формам и&nbsp;драматизму. Некоторые искусствоведы полагают, что Браманте поручал
+                  Брамантино, как живописцу, осуществление своих замыслов.</p>
+              </div>
+  
+              <div class="painter" data-tabs-target="Ludovico_Brea">
+                <img class="painter__img" src="img/painter/italy/Ludovico_Brea.jpeg" alt="Людовико Бреа">
+                <h3 class="painter__name">Людовико Бреа</h3>
+                <span class="painter__years-life">прибл. 1450 — прибл. 1522/1525</span>
+                <p class="painter__info">Ренессансный художник итало-лигурийского происхождения, работы которого
+                  в&nbsp;основном сосредоточены в&nbsp;прибрежных городах современных Лигурии (Италия) и&nbsp;восточной
+                  части Приморских Альп (Франция). Бреа был в&nbsp;основном клерикальным художником, и&nbsp;наиболее
+                  значительные его работы представляют собой алтарные картины. Первая значимая работа художника
+                  представляет
+                  собой роспись францисканского монастыря в&nbsp;Симье (современная Ницца). Прочие работы художника
+                  сосредоточены прибрежных поселениях между Монако и&nbsp;Ментоной, между Таджей и&nbsp;Империей
+                  и&nbsp;между Савоной и&nbsp;Генуей.</p>
+              </div>
+  
+              <div class="painter" data-tabs-target="Biagio_Antonio">
+                <img class="painter__img" src="img/painter/italy/Biagio_Antonio.jpeg" alt="Бьяджо д’Антонио Туччи">
+                <h3 class="painter__name">Бьяджо д’Антонио Туччи</h3>
+                <span class="painter__years-life">1446 — 1 июня 1516</span>
+                <p class="painter__info">Итальянский художник эпохи Возрождения. Его творчество было вдохновлено работами
+                  Филиппо Липпи, Андреа Верроккьо, Доменико Гирландайо. Последнюю четверть&nbsp;XV века работал
+                  в&nbsp;Фаэнце, но&nbsp;в&nbsp;его стиле мало элементов флорентийского стиля&nbsp;&mdash; прослеживается
+                  влияние ранней нидерландскрй живописи.</p>
+              </div>
+  
+              <div class="painter" data-tabs-target="Vecchietta">
+                <img class="painter__img" src="img/painter/italy/Vecchietta.jpeg" alt="Веккьетта">
+                <h3 class="painter__name">Веккьетта</h3>
+                <span class="painter__years-life">ок. 1410 — 6 июня 1480</span>
+                <p class="painter__info">Итальянский художник, скульптор, архитектор и&nbsp;ювелир. Сиенская школа.
+                  Вершиной
+                  его творчества стали росписи свода в&nbsp;баптистерии сиенского собора(1450-53)&nbsp;&mdash; фрески
+                  &laquo;Символы веры&raquo;, &laquo;Пророки&raquo; и&nbsp;&laquo;Сивиллы&raquo; (которые
+                  не&nbsp;сохранились, так как были записаны в&nbsp;XIX&nbsp;веке), а&nbsp;также фрески
+                  в&nbsp;апсиде&nbsp;&mdash; &laquo;Избиение Христа&raquo; и&nbsp;&laquo;Путь на&nbsp;Голгофу&raquo;.
+                  Среди
+                  его немногочисленных станковых работ следует назвать большой триптих &laquo;Вознесение Марии
+                  со&nbsp;святыми&raquo; (1462. Пиенца, собор), и&nbsp;алтарь &laquo;Мадонна со&nbsp;святыми&raquo;
+                  и&nbsp;&laquo;Благовещение&raquo; (ок.&nbsp;1460. Пиенца, епархиальный музей).</p>
+              </div>
+  
+              <div class="painter" data-tabs-target="Andrea_del_Verrocchio">
+                <img class="painter__img" src="img/painter/italy/Andrea_del_Verrocchio.jpeg" alt="Андреа дель Верроккьо">
+                <h3 class="painter__name">Андреа дель Верроккьо</h3>
+                <span class="painter__years-life">1435 — 10 октября 1488</span>
+                <p class="painter__info">Скульптор и&nbsp;живописец эпохи Возрождения, представитель Флорентийской школы.
+                  Среди его учеников&nbsp;&mdash; Сандро Боттичелли, Пьетро Перуджино, Леонардо да&nbsp;Винчи
+                  и&nbsp;Лоренцо
+                  ди&nbsp;Креди. Верроккьо считался непревзойденным декоратором и&nbsp;режиссёром придворных празднеств.
+                </p>
+              </div>
+  
+              <div class="painter painter-content-active" data-tabs-target="Domenico_Ghirlandaio">
+                <img class="painter__img" src="img/painter/italy/Domenico_Ghirlandaio.jpeg" alt="Доменико Гирландайо">
+                <h3 class="painter__name">Доменико Гирландайо</h3>
+                <span class="painter__years-life">2 июня 1448 — 11 января 1494.</span>
+                <p class="painter__info">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
+                  художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной
+                  мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор
+                  фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь
+                  библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того
+                  времени).</p>
+              </div>
+  
+              <div class="painter" data-tabs-target="Benozzo_Gozzoli">
+                <img class="painter__img" src="img/painter/italy/Benozzo_Gozzoli.jpeg" alt="Беноццо Гоццоли">
+                <h3 class="painter__name">Беноццо Гоццоли</h3>
+                <span class="painter__years-life">1420 — 1497</span>
+                <p class="painter__info">Итальянский художник, автор многочисленных циклов фресок, представитель
+                  флорентийской школы живописи. Известен в&nbsp;основном как автор многочисленных фресок, из&nbsp;которых
+                  самая знаменитая&nbsp;&mdash; роспись Капеллы волхвов в&nbsp;Палаццо Медичи-Риккарди во&nbsp;Флоренции
+                </p>
+              </div>
+  
+              <div class="painter" data-tabs-target="Unknown_Artist">
+                <img class="painter__img" src="img/painter/unknown-artist.jpg" alt="Неизвестный художник">
+                <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+                <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
+                  есть на&nbsp;что посмотреть!</p>
+                <a href="#gallery" class="painter__link">В галерею</a>
+              </div>
             </div>
-
-            <div class="painter" data-tabs-target="Bergognone">
-              <img class="painter__img" src="img/painter/italy/Bergognone.jpeg" alt="Бергоньоне, Амброджо">
-              <h3 class="painter__name">Бергоньоне, Амброджо</h3>
-              <span class="painter__years-life">1453 - 1523</span>
-              <p class="painter__info">Прозвище говорит о&nbsp;его тяготении к&nbsp;бургундской школе, по&nbsp;манере
-                ему
-                близок Винченцо Фоппа. Испытал влияние Леонардо да&nbsp;Винчи. Наиболее известен работами
-                1486&ndash;1494&nbsp;в монастырской обители картезианцев Чертоза ди&nbsp;Павия. Позднее работал
-                в&nbsp;Милане в&nbsp;базилике Сант-Эусторджо и&nbsp;церкви Сан-Сатиро, после 1497&nbsp;&mdash;
-                в&nbsp;Лоди, в&nbsp;1512&nbsp;&mdash; в&nbsp;Бергамо, незадолго до&nbsp;смерти&nbsp;&mdash; снова
-                в&nbsp;Милане, в&nbsp;базилике Сан-Симпличано.</p>
-            </div>
-
-            <div class="painter" data-tabs-target="Bissolo">
-              <img class="painter__img" src="img/painter/italy/Bissolo_Marriage_of_St._Catherine.jpg"
-                alt="Биссоло, Франческо">
-              <h3 class="painter__name">Биссоло, Франческо</h3>
-              <span class="painter__years-life">1470 - 20 апреля 1554</span>
-              <p class="painter__info">Сын художника. Ученик Джованни Беллини. С&nbsp;1490 переехал в&nbsp;мастерскую
-                Беллини. С&nbsp;1492 по&nbsp;1530 год работал в&nbsp;Венеции. Помогал учителю в&nbsp;работе над
-                украшением
-                Большого зала Совета Дворца дожей (Венеция). Принимал участие в&nbsp;создании украшений Церкви Иль
-                Реденторе в&nbsp;Венеции. Художник эпохи Возрождения. В&nbsp;своём творчестве подражал Джорджоне. Работы
-                художника хранятся ныне во&nbsp;многих музеях мира. В&nbsp;санкт-петербургском Эрмитаже находится его
-                картина &laquo;Богоматерь с&nbsp;Младенцем Христом&raquo;. В&nbsp;Британской Национальной
-                галерее&nbsp;&mdash; &laquo;Мадонна с&nbsp;Младенцем со&nbsp;святыми и&nbsp;донатором&raquo;. Ряд его
-                полотен находится в&nbsp;музеях Варшавы, Лос-Анджелеса (Музей Нортона Саймона и&nbsp;Los Angeles County
-                Museum of&nbsp;Art), Дэйтоновском институте искусств (штат Огайо, США) и&nbsp;др.</p>
-            </div>
-
-            <div class="painter" data-tabs-target="Giovanni_Antonio_Boltraffio">
-              <img class="painter__img" src="img/painter/italy/Giovanni_Antonio_Boltraffio.jpeg"
-                alt="Джованни Антонио Больтраффио">
-              <h3 class="painter__name">Джованни Антонио Больтраффио</h3>
-              <span class="painter__years-life">1466 или 1467 — 1516</span>
-              <p class="painter__info">Итальянский художник Высокого Возрождения. Его первое произведение
-                &laquo;Воскресение Христа, святой Леонард и&nbsp;святая Лючия&raquo; выполнено в&nbsp;1491 году
-                совместно
-                с&nbsp;Марко д&rsquo;Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным художником
-                Лодовико
-                Моро и&nbsp;славился своими психологическими портретами.</p>
-            </div>
-
-            <div class="painter" data-tabs-target="Francesco_Bonsignori">
-              <img class="painter__img" src="img/painter/italy/Francesco_Bonsignori.jpeg" alt="Франческо Бонсиньори">
-              <h3 class="painter__name">Франческо Бонсиньори</h3>
-              <span class="painter__years-life">ок. 1460 — 2 июля 1519</span>
-              <p class="painter__info">Итальянский живописец, писавший картины в&nbsp;стиле Ренессанса. Среди известных
-                творений этого периода самыми ранними произведениями художника являются полотна &laquo;Мадонна
-                со&nbsp;спящим младенцем&raquo; 1483 года и&nbsp;&laquo;Алтарь Даль Бово&raquo;, или &laquo;Мадонна
-                на&nbsp;троне с&nbsp;предстоящими святыми и&nbsp;донатором Альтабеллой Авогадро&raquo; 1484&nbsp;года,
-                которые ныне входят в&nbsp;собрание Общественного музея Вероны.</p>
-            </div>
-
-            <div class="painter" data-tabs-target="Raffaello_Botticini">
-              <img class="painter__img" src="img/painter/italy/Raffaello_Botticini.jpeg" alt="Рафаэль Боттичини">
-              <h3 class="painter__name">Рафаэль Боттичини</h3>
-              <span class="painter__years-life">11 сентября 1477 — известен до 1520 г</span>
-              <p class="painter__info">Итальянский художник. Рафаэлло принадлежал к&nbsp;флорентийской артистической
-                династии. Рафаэлло Боттичини был почти забыт художественной критикой; главную роль в&nbsp;его
-                &laquo;возрождении&raquo; принадлежит итальянскому искусствоведу Федерико Дзери, опубликовавшему
-                в&nbsp;1968 году работу о&nbsp;художнике; в&nbsp;ней Дзери смог восстановить хронологию его творчества
-                и&nbsp;более точно атрибутировать некоторые произведения.</p>
-            </div>
-
-            <div class="painter" data-tabs-target="Bartolommeo">
-              <img class="painter__img" src="img/painter/italy/Bartolommeo.jpeg" alt="Брамантино">
-              <h3 class="painter__name">Брамантино</h3>
-              <span class="painter__years-life">ок. 1465 — 1530</span>
-              <p class="painter__info">Итальянский художник и&nbsp;архитектор. Брамантино сформировался под влиянием
-                Бутиноне и&nbsp;графического стиля Падуи и&nbsp;Феррары. Впоследствии он&nbsp;многому научился
-                у&nbsp;Браманте, у&nbsp;которого долгое время состоял помощником (чем и&nbsp;объясняется его прозвище
-                Брамантино&nbsp;&mdash; букв. &laquo;Маленький Браманте&raquo;) и&nbsp;у&nbsp;которого перенял любовь
-                к&nbsp;монументальным формам и&nbsp;драматизму. Некоторые искусствоведы полагают, что Браманте поручал
-                Брамантино, как живописцу, осуществление своих замыслов.</p>
-            </div>
-
-            <div class="painter" data-tabs-target="Ludovico_Brea">
-              <img class="painter__img" src="img/painter/italy/Ludovico_Brea.jpeg" alt="Людовико Бреа">
-              <h3 class="painter__name">Людовико Бреа</h3>
-              <span class="painter__years-life">прибл. 1450 — прибл. 1522/1525</span>
-              <p class="painter__info">Ренессансный художник итало-лигурийского происхождения, работы которого
-                в&nbsp;основном сосредоточены в&nbsp;прибрежных городах современных Лигурии (Италия) и&nbsp;восточной
-                части Приморских Альп (Франция). Бреа был в&nbsp;основном клерикальным художником, и&nbsp;наиболее
-                значительные его работы представляют собой алтарные картины. Первая значимая работа художника
-                представляет
-                собой роспись францисканского монастыря в&nbsp;Симье (современная Ницца). Прочие работы художника
-                сосредоточены прибрежных поселениях между Монако и&nbsp;Ментоной, между Таджей и&nbsp;Империей
-                и&nbsp;между Савоной и&nbsp;Генуей.</p>
-            </div>
-
-            <div class="painter" data-tabs-target="Biagio_Antonio">
-              <img class="painter__img" src="img/painter/italy/Biagio_Antonio.jpeg" alt="Бьяджо д’Антонио Туччи">
-              <h3 class="painter__name">Бьяджо д’Антонио Туччи</h3>
-              <span class="painter__years-life">1446 — 1 июня 1516</span>
-              <p class="painter__info">Итальянский художник эпохи Возрождения. Его творчество было вдохновлено работами
-                Филиппо Липпи, Андреа Верроккьо, Доменико Гирландайо. Последнюю четверть&nbsp;XV века работал
-                в&nbsp;Фаэнце, но&nbsp;в&nbsp;его стиле мало элементов флорентийского стиля&nbsp;&mdash; прослеживается
-                влияние ранней нидерландскрй живописи.</p>
-            </div>
-
-            <div class="painter" data-tabs-target="Vecchietta">
-              <img class="painter__img" src="img/painter/italy/Vecchietta.jpeg" alt="Веккьетта">
-              <h3 class="painter__name">Веккьетта</h3>
-              <span class="painter__years-life">ок. 1410 — 6 июня 1480</span>
-              <p class="painter__info">Итальянский художник, скульптор, архитектор и&nbsp;ювелир. Сиенская школа.
-                Вершиной
-                его творчества стали росписи свода в&nbsp;баптистерии сиенского собора(1450-53)&nbsp;&mdash; фрески
-                &laquo;Символы веры&raquo;, &laquo;Пророки&raquo; и&nbsp;&laquo;Сивиллы&raquo; (которые
-                не&nbsp;сохранились, так как были записаны в&nbsp;XIX&nbsp;веке), а&nbsp;также фрески
-                в&nbsp;апсиде&nbsp;&mdash; &laquo;Избиение Христа&raquo; и&nbsp;&laquo;Путь на&nbsp;Голгофу&raquo;.
-                Среди
-                его немногочисленных станковых работ следует назвать большой триптих &laquo;Вознесение Марии
-                со&nbsp;святыми&raquo; (1462. Пиенца, собор), и&nbsp;алтарь &laquo;Мадонна со&nbsp;святыми&raquo;
-                и&nbsp;&laquo;Благовещение&raquo; (ок.&nbsp;1460. Пиенца, епархиальный музей).</p>
-            </div>
-
-            <div class="painter" data-tabs-target="Andrea_del_Verrocchio">
-              <img class="painter__img" src="img/painter/italy/Andrea_del_Verrocchio.jpeg" alt="Андреа дель Верроккьо">
-              <h3 class="painter__name">Андреа дель Верроккьо</h3>
-              <span class="painter__years-life">1435 — 10 октября 1488</span>
-              <p class="painter__info">Скульптор и&nbsp;живописец эпохи Возрождения, представитель Флорентийской школы.
-                Среди его учеников&nbsp;&mdash; Сандро Боттичелли, Пьетро Перуджино, Леонардо да&nbsp;Винчи
-                и&nbsp;Лоренцо
-                ди&nbsp;Креди. Верроккьо считался непревзойденным декоратором и&nbsp;режиссёром придворных празднеств.
-              </p>
-            </div>
-
-            <div class="painter painter-content-active" data-tabs-target="Domenico_Ghirlandaio">
-              <img class="painter__img" src="img/painter/italy/Domenico_Ghirlandaio.jpeg" alt="Доменико Гирландайо">
-              <h3 class="painter__name">Доменико Гирландайо</h3>
-              <span class="painter__years-life">2 июня 1448 — 11 января 1494.</span>
-              <p class="painter__info">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
-                художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной
-                мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор
-                фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь
-                библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того
-                времени).</p>
-            </div>
-
-            <div class="painter" data-tabs-target="Benozzo_Gozzoli">
-              <img class="painter__img" src="img/painter/italy/Benozzo_Gozzoli.jpeg" alt="Беноццо Гоццоли">
-              <h3 class="painter__name">Беноццо Гоццоли</h3>
-              <span class="painter__years-life">1420 — 1497</span>
-              <p class="painter__info">Итальянский художник, автор многочисленных циклов фресок, представитель
-                флорентийской школы живописи. Известен в&nbsp;основном как автор многочисленных фресок, из&nbsp;которых
-                самая знаменитая&nbsp;&mdash; роспись Капеллы волхвов в&nbsp;Палаццо Медичи-Риккарди во&nbsp;Флоренции
-              </p>
-            </div>
-
-            <div class="painter" data-tabs-target="Unknown_Artist">
-              <img class="painter__img" src="img/painter/unknown-artist.jpg" alt="Неизвестный художник">
-              <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-              <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
-                есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="painter__link">В галерею</a>
-            </div>
-          </div>
-          <div class="catalog__accordion">
-            <ul class="accordion-list list-reset">
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <ul class="accordion__painter-list list-reset">
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Benedetto_di_Bindo">Бенедетто ди Биндо</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Bergognone">Бергоньоне, Амброджо</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Bissolo">Биссоло, Франческо</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Giovanni_Antonio_Boltraffio">Больтраффио, Джованни</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Francesco_Bonsignori">Бонсиньори, Франческо</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Raffaello_Botticini">Боттичини, Рафаэлло </a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Bartolommeo">Брамантино</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Ludovico_Brea">Бреа, Людовико</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Biagio_Antonio">Бьяджо д’Антонио Туччи </a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Vecchietta">Веккьетта</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Andrea_del_Verrocchio">Андреа Верроккьо</a></li>
-                    <li class="accordion__painter-item"><a href="#"
-                        class="accordion__painter-link accordion__painter-link--active"
-                        data-tabs-path="Domenico_Ghirlandaio">Доменико Гирландайо</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Benozzo_Gozzoli">Беноццо Гоццоли</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist">Граначчи, Франческо</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist">Грегорио ди Чекко</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist">Джованни да Удине</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist">Джованни ди Паоло</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist">Джорджоне</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist">Парентино, Бернардо</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist">Пезеллино</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist">Пьетро Перуджино</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist">Перуцци, Бальдассаре</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist">Пизанелло</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist">Пинтуриккьо</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1500 по&nbsp;1599&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
+            <div class="catalog__accordion">
+              <ul class="accordion-list list-reset">
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <ul class="accordion__painter-list list-reset">
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Benedetto_di_Bindo">Бенедетто ди Биндо</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Bergognone">Бергоньоне, Амброджо</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Bissolo">Биссоло, Франческо</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Giovanni_Antonio_Boltraffio">Больтраффио, Джованни</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Francesco_Bonsignori">Бонсиньори, Франческо</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Raffaello_Botticini">Боттичини, Рафаэлло </a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Bartolommeo">Брамантино</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Ludovico_Brea">Бреа, Людовико</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Biagio_Antonio">Бьяджо д’Антонио Туччи </a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Vecchietta">Веккьетта</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Andrea_del_Verrocchio">Андреа Верроккьо</a></li>
+                      <li class="accordion__painter-item"><a href="#"
+                          class="accordion__painter-link accordion__painter-link--active"
+                          data-tabs-path="Domenico_Ghirlandaio">Доменико Гирландайо</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Benozzo_Gozzoli">Беноццо Гоццоли</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist">Граначчи, Франческо</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist">Грегорио ди Чекко</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist">Джованни да Удине</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist">Джованни ди Паоло</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist">Джорджоне</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist">Парентино, Бернардо</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist">Пезеллино</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist">Пьетро Перуджино</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist">Перуцци, Бальдассаре</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist">Пизанелло</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist">Пинтуриккьо</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1500 по&nbsp;1599&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1600 по&nbsp;1699&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1600 по&nbsp;1699&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1700 по&nbsp;1799&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1700 по&nbsp;1799&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1800 по&nbsp;1899&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1800 по&nbsp;1899&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1900 по&nbsp;1999&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1900 по&nbsp;1999&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;2000&nbsp;г.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;2000&nbsp;г.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="tabs__content" data-tabs-target="russia">
-        <p class="tabs__info">
-          Пейзажная живопись была широко распространена в&nbsp;России, так как многие через нее постигали природу
-          и&nbsp;создавали свой образ Родины. Если рассмотреть , то&nbsp;практически все они в&nbsp;большей или меньшей
-          степени работали с&nbsp;пейзажами. Однако в&nbsp;этой статье мы&nbsp;рассмотрим наиболее известных
-          пейзажистов, для которых пейзаж стал одним из&nbsp;основных .
-        </p>
-        <div class="tabs__wrapper">
-          <div class="tabs__container">
-            <div class="painter painter-content-active" data-tabs-target="Unknown_Artist7">
-              <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
-              <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-              <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
-                есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="painter__link">В галерею</a>
+                </li>
+              </ul>
             </div>
-            <div class="painter" data-tabs-target="Unknown_Artist8">
-              <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
-              <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-              <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
-                есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="painter__link">В галерею</a>
-            </div>
-            <div class="painter" data-tabs-target="Unknown_Artist9">
-              <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
-              <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-              <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
-                есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="painter__link">В галерею</a>
-            </div>
-          </div>
-          <div class="catalog__accordion">
-            <ul class="accordion-list list-reset">
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <ul class="accordion__painter-list list-reset">
-                    <li class="accordion__painter-item"><a href="#"
-                        class="accordion__painter-link accordion__painter-link_active accordion__painter-link--active"
-                        data-tabs-path="Unknown_Artist7">Неизвестный художник</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist8">Неизвестный художник</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist9">Неизвестный художник</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1500 по&nbsp;1599&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1600 по&nbsp;1699&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1700 по&nbsp;1799&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1800 по&nbsp;1899&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1900 по&nbsp;1999&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;2000&nbsp;г.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
-      <div class="tabs__content" data-tabs-target="belgium">
-        <p class="tabs__info">
-          Отправляясь в Бельгию с познавательными целями, следует помнить несколько имен, важных для бельгийской истории
-          искусств. Это такие художники как Петер Рубенс, Якоб Йорданс, Антонис ван Дейк, Ян ван Эйк, Питер Брейгель,
-          Рене Магритт и Ханс Мемлинг. С их творчеством можно ознакомиться почти в каждом городе Бельгии — в
-          многочисленных музеях и церквях.
-        </p>
-        <div class="tabs__wrapper">
-          <div class="tabs__container">
-            <div class="painter painter-content-active" data-tabs-target="Unknown_Artist10">
-              <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
-              <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-              <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
-                есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="painter__link">В галерею</a>
+      <div class="tabs">
+        <div class="tabs__content" data-tabs-target="russia">
+          <p class="tabs__info">
+            Пейзажная живопись была широко распространена в&nbsp;России, так как многие через нее постигали природу
+            и&nbsp;создавали свой образ Родины. Если рассмотреть , то&nbsp;практически все они в&nbsp;большей или меньшей
+            степени работали с&nbsp;пейзажами. Однако в&nbsp;этой статье мы&nbsp;рассмотрим наиболее известных
+            пейзажистов, для которых пейзаж стал одним из&nbsp;основных .
+          </p>
+          <div class="tabs__wrapper">
+            <div class="tabs__container">
+              <div class="painter painter-content-active" data-tabs-target="Unknown_Artist7">
+                <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
+                <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+                <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
+                  есть на&nbsp;что посмотреть!</p>
+                <a href="#gallery" class="painter__link">В галерею</a>
+              </div>
+              <div class="painter" data-tabs-target="Unknown_Artist8">
+                <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
+                <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+                <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
+                  есть на&nbsp;что посмотреть!</p>
+                <a href="#gallery" class="painter__link">В галерею</a>
+              </div>
+              <div class="painter" data-tabs-target="Unknown_Artist9">
+                <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
+                <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+                <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
+                  есть на&nbsp;что посмотреть!</p>
+                <a href="#gallery" class="painter__link">В галерею</a>
+              </div>
             </div>
-            <div class="painter" data-tabs-target="Unknown_Artist11">
-              <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
-              <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-              <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
-                есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="painter__link">В галерею</a>
-            </div>
-            <div class="painter" data-tabs-target="Unknown_Artist12">
-              <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
-              <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
-              <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
-                есть на&nbsp;что посмотреть!</p>
-              <a href="#gallery" class="painter__link">В галерею</a>
+            <div class="catalog__accordion">
+              <ul class="accordion-list list-reset">
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <ul class="accordion__painter-list list-reset">
+                      <li class="accordion__painter-item"><a href="#"
+                          class="accordion__painter-link accordion__painter-link_active accordion__painter-link--active"
+                          data-tabs-path="Unknown_Artist7">Неизвестный художник</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist8">Неизвестный художник</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist9">Неизвестный художник</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1500 по&nbsp;1599&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1600 по&nbsp;1699&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1700 по&nbsp;1799&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1800 по&nbsp;1899&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1900 по&nbsp;1999&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;2000&nbsp;г.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="catalog__accordion">
-            <ul class="accordion-list list-reset">
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <ul class="accordion__painter-list list-reset">
-                    <li class="accordion__painter-item"><a href="#"
-                        class="accordion__painter-link accordion__painter-link--active accordion__painter-link_active"
-                        data-tabs-path="Unknown_Artist10">Неизвестный художник</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist11">Неизвестный художник</a></li>
-                    <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
-                        data-tabs-path="Unknown_Artist12">Неизвестный художник</a></li>
-                  </ul>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1500 по&nbsp;1599&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
+        </div>
+      </div>
+      <div class="tabs">
+        <div class="tabs__content" data-tabs-target="belgium">
+          <p class="tabs__info">
+            Отправляясь в Бельгию с познавательными целями, следует помнить несколько имен, важных для бельгийской истории
+            искусств. Это такие художники как Петер Рубенс, Якоб Йорданс, Антонис ван Дейк, Ян ван Эйк, Питер Брейгель,
+            Рене Магритт и Ханс Мемлинг. С их творчеством можно ознакомиться почти в каждом городе Бельгии — в
+            многочисленных музеях и церквях.
+          </p>
+          <div class="tabs__wrapper">
+            <div class="tabs__container">
+              <div class="painter painter-content-active" data-tabs-target="Unknown_Artist10">
+                <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
+                <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+                <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
+                  есть на&nbsp;что посмотреть!</p>
+                <a href="#gallery" class="painter__link">В галерею</a>
+              </div>
+              <div class="painter" data-tabs-target="Unknown_Artist11">
+                <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
+                <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+                <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
+                  есть на&nbsp;что посмотреть!</p>
+                <a href="#gallery" class="painter__link">В галерею</a>
+              </div>
+              <div class="painter" data-tabs-target="Unknown_Artist12">
+                <img class="painter__img" src="img/painter/germany/unknown-artist.jpg" alt="Неизвестный художник">
+                <h3 class="painter__name painter__name_unknown">Что мы&nbsp;о&nbsp;нём знаем?</h3>
+                <p class="painter__info painter__info_unknown">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее
+                  есть на&nbsp;что посмотреть!</p>
+                <a href="#gallery" class="painter__link">В галерею</a>
+              </div>
+            </div>
+            <div class="catalog__accordion">
+              <ul class="accordion-list list-reset">
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <ul class="accordion__painter-list list-reset">
+                      <li class="accordion__painter-item"><a href="#"
+                          class="accordion__painter-link accordion__painter-link--active accordion__painter-link_active"
+                          data-tabs-path="Unknown_Artist10">Неизвестный художник</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist11">Неизвестный художник</a></li>
+                      <li class="accordion__painter-item"><a href="#" class="accordion__painter-link"
+                          data-tabs-path="Unknown_Artist12">Неизвестный художник</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1500 по&nbsp;1599&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1600 по&nbsp;1699&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1600 по&nbsp;1699&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1700 по&nbsp;1799&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1700 по&nbsp;1799&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1800 по&nbsp;1899&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1800 по&nbsp;1899&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;1900 по&nbsp;1999&nbsp;гг.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;1900 по&nbsp;1999&nbsp;гг.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-              <li class="accordion">
-                <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
-                  tabindex="0">
-                  <span class="accordion__title" tabindex="0">C&nbsp;2000&nbsp;г.</span>
-                  <span class="accordion__icon"></span>
-                </button>
-                <div class="accordion__content" aria-hidden="false">
-                  <div class="content-acc">
-                    <span class="content-acc__img"></span>
-                    <div class="content-acc__wrapper">
-                      <h3 class="content-acc__title">Здесь пока пусто</h3>
-                      <p class="content-acc__text">
-                        А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
-                      </p>
-                      <a href="#gallery" class="content-acc__link">В галерею</a>
+                </li>
+                <li class="accordion">
+                  <button class="accordion__control btn-reset" aria-expanded="true" aria-label="Открытие раздела"
+                    tabindex="0">
+                    <span class="accordion__title">C&nbsp;2000&nbsp;г.</span>
+                    <span class="accordion__icon"></span>
+                  </button>
+                  <div class="accordion__content" aria-hidden="false">
+                    <div class="content-acc">
+                      <span class="content-acc__img"></span>
+                      <div class="content-acc__wrapper">
+                        <h3 class="content-acc__title">Здесь пока пусто</h3>
+                        <p class="content-acc__text">
+                          А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                        </p>
+                        <a href="#gallery" class="content-acc__link">В галерею</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -1555,12 +1530,12 @@
         <h2 class="event__title title">События</h2>
         <div class="event__swiper-container">
           <div class="event__pagination">
-            <button class="event__button-prev btn-reset event__btn_disabled">
+            <button class="event__button-prev btn-reset event__button-prev_disabled">
               <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 0.999998L6 6L1 11" stroke="black" />
               </svg>
             </button>
-            <button class="event__button-next btn-reset event__btn_disabled">
+            <button class="event__button-next btn-reset event__button-next_disabled">
               <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 0.999998L6 6L1 11" stroke="black" />
               </svg>
@@ -1649,166 +1624,164 @@
       <div class="container edition__container">
         <div class="edition__left">
           <h2 class="title edition__title">Издания</h2>
-          <div class="edition__category category">
-            <div class="category__container">
+          <div class="edition__category">
+          
+            <form action="/" method="post">
+              <div class="questions">
+                <button class="heading js-check-heading" type="button">Список</button>
 
-              <form action="/" method="POST" class="category__form">
-                <div class="category__list">
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-one" checked>
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Бестселлеры</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
 
-                  <button class="category__caption js-check-heading" type="button">Категории</button>
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-two">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Искусство</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
 
-                  <label class="checkbox-wrap">
-                    <input class="checkbox visually-hidden" type="checkbox" name="check-one" checked>
-                    <div class="checkbox-content">
-                      <span class="visual-check"></span>
-                      <span class="check-text">Бестселлеры</span>
-                      <span class="close-icon"></span>
-                    </div>
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-three">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Архитектура</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-four">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Дизайн</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-four">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Мода</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-four">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Детям</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-four">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Художественная литература</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-four">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Публицистика</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-four">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Путеводители</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-four">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Философия</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-four">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Учебная литература</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+
+                <label class="checkbox-wrap">
+                  <input class="checkbox visually-hidden" type="checkbox" name="check-four">
+                  <span class="checkbox-content">
+                    <span class="visual-check"></span>
+                    <span class="check-text">Журналы и газеты</span>
+                    <span class="close-icon"></span>
+                  </span>
+                </label>
+              </div>
+
+              <div class="price-content">
+                <span class="price-content__title">Цена</span>
+
+                <div class="price-content__form form-price">
+                  <label class="form-price__label">
+                    <span class="form-price__caption form-price__caption_from">От</span>
+                    <input class="form-price__input" type="number" value="50" min="1" name="price-from">
                   </label>
 
-                  <label class="checkbox-wrap">
-                    <input class="checkbox visually-hidden" type="checkbox" name="check-two">
-                    <div class="checkbox-content">
-                      <span class="visual-check"></span>
-                      <span class="check-text">Искусство</span>
-                      <span class="close-icon"></span>
-                    </div>
+                  <span class="form-price__caption form-price__caption_to">до</span>
+
+                  <label class="form-price__label">
+                    <input class="form-price__input" type="number" value="25000" min="1" name="price-to">
+                    <span class="form-price__caption form-price__caption_ru">руб.</span>
                   </label>
 
-                  <label class="checkbox-wrap">
-                    <input class="checkbox visually-hidden" type="checkbox" name="check-three">
-                    <div class="checkbox-content">
-                      <span class="visual-check"></span>
-                      <span class="check-text">Архитектура</span>
-                      <span class="close-icon"></span>
-                    </div>
-                  </label>
-
-                  <label class="checkbox-wrap">
-                    <input class="checkbox visually-hidden" type="checkbox" name="check-four">
-                    <div class="checkbox-content">
-                      <span class="visual-check"></span>
-                      <span class="check-text">Дизайн</span>
-                      <span class="close-icon"></span>
-                    </div>
-                  </label>
-
-                  <label class="checkbox-wrap">
-                    <input class="checkbox visually-hidden" type="checkbox" name="check-four">
-                    <div class="checkbox-content">
-                      <span class="visual-check"></span>
-                      <span class="check-text">Мода</span>
-                      <span class="close-icon"></span>
-                    </div>
-                  </label>
-
-                  <label class="checkbox-wrap">
-                    <input class="checkbox visually-hidden" type="checkbox" name="check-four">
-                    <div class="checkbox-content">
-                      <span class="visual-check"></span>
-                      <span class="check-text">Детям</span>
-                      <span class="close-icon"></span>
-                    </div>
-                  </label>
-
-                  <label class="checkbox-wrap">
-                    <input class="checkbox visually-hidden" type="checkbox" name="check-four">
-                    <div class="checkbox-content">
-                      <span class="visual-check"></span>
-                      <span class="check-text">Художественная литература</span>
-                      <span class="close-icon"></span>
-                    </div>
-                  </label>
-
-                  <label class="checkbox-wrap">
-                    <input class="checkbox visually-hidden" type="checkbox" name="check-four">
-                    <div class="checkbox-content">
-                      <span class="visual-check"></span>
-                      <span class="check-text">Публицистика</span>
-                      <span class="close-icon"></span>
-                    </div>
-                  </label>
-
-                  <label class="checkbox-wrap">
-                    <input class="checkbox visually-hidden" type="checkbox" name="check-four">
-                    <div class="checkbox-content">
-                      <span class="visual-check"></span>
-                      <span class="check-text">Путеводители</span>
-                      <span class="close-icon"></span>
-                    </div>
-                  </label>
-
-                  <label class="checkbox-wrap">
-                    <input class="checkbox visually-hidden" type="checkbox" name="check-four">
-                    <div class="checkbox-content">
-                      <span class="visual-check"></span>
-                      <span class="check-text">Философия</span>
-                      <span class="close-icon"></span>
-                    </div>
-                  </label>
-
-                  <label class="checkbox-wrap">
-                    <input class="checkbox visually-hidden" type="checkbox" name="check-four">
-                    <div class="checkbox-content">
-                      <span class="visual-check"></span>
-                      <span class="check-text">Учебная литература</span>
-                      <span class="close-icon"></span>
-                    </div>
-                  </label>
-
-                  <label class="checkbox-wrap">
-                    <input class="checkbox visually-hidden" type="checkbox" name="check-four">
-                    <div class="checkbox-content">
-                      <span class="visual-check"></span>
-                      <span class="check-text">Журналы и газеты</span>
-                      <span class="close-icon"></span>
-                    </div>
-                  </label>
                 </div>
-                <div class="category__price">
-                  <span class="category__caption_price">Цена</span>
-
-                  <div class="categorty__price-form form-price">
-                    <label class="form-price__label">
-                      <span class="form-price__caption form-price__caption_from">От</span>
-                      <input class="form-price__input" type="number" value="50" min="1" name="price-from">
-                    </label>
-
-                    <span class="form-price__caption form-price__caption_to">до</span>
-
-                    <label class="form-price__label">
-                      <input class="form-price__input" type="number" value="25000" min="1" name="price-to">
-                      <span class="form-price__caption form-price__caption_ru">руб.</span>
-                    </label>
-
-                  </div>
-                </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
         </div>
         <div class="edition__right right-edition">
           <div class="right-edition__nav edition__slider-nav">
-            <button class="btn-reset right-edition__prev right-edition__btn_disabled">
+            <button class="btn-reset right-edition__prev right-edition__prev_disabled">
               <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 11L0.999995 6L6 0.999998" stroke="white" />
               </svg>
             </button>
             <div class="right-edition__swiper-pagination"></div>
-            <button class="btn-reset right-edition__next right-edition__btn_disabled">
+            <button class="btn-reset right-edition__next right-edition__next_disabled">
               <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 11L6.00001 6L1 0.999997" stroke="white" />
               </svg>
             </button>
           </div>
-          <div class="edition__swiper-container">
-            <div class="swiper edition__slider editon-slide">
-              <div class="swiper-wrapper">
+          <div class="right-edition__swiper-container">
+            <div class="swiper edition-slider">
+              <div class="swiper-wrapper edition-slide">
                 <div class="swiper-slide edition-slide__item edition-slide__item_1" tabindex="0">
                   <picture>
                     <source srcset="img/edition/edition1-320.jpg" media="(max-width: 530px)">
                     <source srcset="img/edition/edition1-tab.jpg" media="(max-width: 1190px)">
-                    <img src="img/edition/edition1.jpg" class="edition-slide__item_img"
+                    <img src="img/edition/edition1.jpg" class="edition-slide__item-img"
                       alt="Иоханнес Иттен Искусство цвета">
                   </picture>
                   <div class="edition-slide__content">
@@ -1819,14 +1792,14 @@
                     <span class="edition-slide__price">620 руб</span>
                   </div>
                   <div class="left">
-                    <button class="btn-reset edition__btn" aria-label="Кнопка Заказать">Заказать</button>
+                    <button class="btn-reset edition-btn" aria-label="Кнопка Заказать">Заказать</button>
                   </div>
                 </div>
                 <div class="swiper-slide edition-slide__item edition-slide__item_2" tabindex="0">
                   <picture>
                     <source srcset="img/edition/edition2-320.jpg" media="(max-width: 530px)">
                     <source srcset="img/edition/edition2-tab.jpg" media="(max-width: 1190px)">
-                    <img src="img/edition/edition2.jpg" class="edition-slide__item_img" alt="Эмиль Рудер Типографика">
+                    <img src="img/edition/edition2.jpg" class="edition-slide__item-img" alt="Эмиль Рудер Типографика">
                   </picture>
                   <div class="edition-slide__content">
                     <div class="edition-slide__wrapper">
@@ -1836,14 +1809,14 @@
                     <span class="edition-slide__price">2 450 руб</span>
                   </div>
                   <div class="left">
-                    <button class="btn-reset edition__btn" aria-label="Кнопка Заказать">Заказать</button>
+                    <button class="btn-reset edition-btn" aria-label="Кнопка Заказать">Заказать</button>
                   </div>
                 </div>
                 <div class="swiper-slide edition-slide__item edition-slide__item_3" tabindex="0">
                   <picture>
                     <source srcset="img/edition/edition3-320.jpg" media="(max-width: 530px)">
                     <source srcset="img/edition/edition3-tab.jpg" media="(max-width: 1190px)">
-                    <img src="img/edition/edition3.jpg" class="edition-slide__item_img"
+                    <img src="img/edition/edition3.jpg" class="edition-slide__item-img"
                       alt="Гордон, Юрий Книга про буквы">
                   </picture>
                   <div class="edition-slide__content">
@@ -1854,14 +1827,14 @@
                     <span class="edition-slide__price">2 200 руб</span>
                   </div>
                   <div class="left">
-                    <button class="btn-reset edition__btn" aria-label="Кнопка Заказать">Заказать</button>
+                    <button class="btn-reset edition-btn" aria-label="Кнопка Заказать">Заказать</button>
                   </div>
                 </div>
                 <div class="swiper-slide edition-slide__item edition-slide__item_4" tabindex="0">
                   <picture>
                     <source srcset="img/edition/edition4-320.jpg" media="(max-width: 530px)">
                     <source srcset="img/edition/edition4-tab.jpg" media="(max-width: 1190px)">
-                    <img src="img/edition/edition4.jpg" class="edition-slide__item_img"
+                    <img src="img/edition/edition4.jpg" class="edition-slide__item-img"
                       alt="Кричевский, Владимир Николай Ильин">
                   </picture>
                   <div class="edition-slide__content">
@@ -1872,14 +1845,14 @@
                     <span class="edition-slide__price">1 110 руб</span>
                   </div>
                   <div class="left">
-                    <button class="btn-reset edition__btn" aria-label="Кнопка Заказать">Заказать</button>
+                    <button class="btn-reset edition-btn" aria-label="Кнопка Заказать">Заказать</button>
                   </div>
                 </div>
                 <div class="swiper-slide edition-slide__item edition-slide__item_5" tabindex="0">
                   <picture>
                     <source srcset="img/edition/edition5-320.jpg" media="(max-width: 530px)">
                     <source srcset="img/edition/edition5-tab.jpg" media="(max-width: 1190px)">
-                    <img src="img/edition/edition5.jpg" class="edition-slide__item_img"
+                    <img src="img/edition/edition5.jpg" class="edition-slide__item-img"
                       alt="Мюллер-Брокманн, Йозеф  Модульные сетки в граф...">
                   </picture>
                   <div class="edition-slide__content">
@@ -1890,14 +1863,14 @@
                     <span class="edition-slide__price">1 450 руб</span>
                   </div>
                   <div class="left">
-                    <button class="btn-reset edition__btn" aria-label="Кнопка Заказать">Заказать</button>
+                    <button class="btn-reset edition-btn" aria-label="Кнопка Заказать">Заказать</button>
                   </div>
                 </div>
                 <div class="swiper-slide edition-slide__item edition-slide__item_6" tabindex="0">
                   <picture>
                     <source srcset="img/edition/edition6-320.jpg" media="(max-width: 530px)">
                     <source srcset="img/edition/edition6-tab.jpg" media="(max-width: 1190px)">
-                    <img src="img/edition/edition6.jpg" class="edition-slide__item_img"
+                    <img src="img/edition/edition6.jpg" class="edition-slide__item-img"
                       alt="Хеллер, Чваст Эволюция графических ст...">
                   </picture>
                   <div class="edition-slide__content">
@@ -1908,14 +1881,14 @@
                     <span class="edition-slide__price">3 200 руб</span>
                   </div>
                   <div class="left">
-                    <button class="btn-reset edition__btn" aria-label="Кнопка Заказать">Заказать</button>
+                    <button class="btn-reset edition-btn" aria-label="Кнопка Заказать">Заказать</button>
                   </div>
                 </div>
                 <div class="swiper-slide edition-slide__item edition-slide__item_7" tabindex="0">
                   <picture>
                     <source srcset="img/edition/edition7-320.jpg" media="(max-width: 530px)">
                     <source srcset="img/edition/edition7-tab.jpg" media="(max-width: 1190px)">
-                    <img src="img/edition/edition7.jpg" class="edition-slide__item_img"
+                    <img src="img/edition/edition7.jpg" class="edition-slide__item-img"
                       alt="Иттен, Иоханнес Искусство и визуальное в...">
                   </picture>
                   <div class="edition-slide__content">
@@ -1926,7 +1899,7 @@
                     <span class="edition-slide__price">2 200 руб</span>
                   </div>
                   <div class="left">
-                    <button class="btn-reset edition__btn" aria-label="Кнопка Заказать">Заказать</button>
+                    <button class="btn-reset edition-btn" aria-label="Кнопка Заказать">Заказать</button>
                   </div>
                 </div>
               </div>
@@ -1982,12 +1955,12 @@
             <h3 class="partners__title">Партнёры проектов:</h3>
             <div class="partners__container">
               <div class="partners__pagination">
-                <button class="partners__button-prev btn-reset partners__btn_disabled">
+                <button class="partners__button-prev btn-reset partners__button-prev_disabled">
                   <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 11L0.999995 6L6 0.999998" stroke="black" />
                   </svg>
                 </button>
-                <button class="partners__button-next btn-reset partners__btn_disabled">
+                <button class="partners__button-next btn-reset partners__button-next_disabled">
                   <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 0.999998L6 6L1 11" stroke="black" />
                   </svg>
@@ -2050,7 +2023,7 @@
       </div>
     </section>
 
-    <!-- <section class="contacts" id="contacts">
+    <section class="contacts" id="contacts">
       <div class="container contacts__container">
         <h2 class="title contacts__title">Контакты</h2>
       </div>
@@ -2125,8 +2098,9 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
   </main>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <script src="script/swiper.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
