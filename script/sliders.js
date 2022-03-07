@@ -19,7 +19,7 @@ const heroswiper = new Swiper('.hero-swiper', {
 const galleryswiper = new Swiper('.gallery-swiper', {
   clickable: true,
   grid: {
-    rows: 2,
+    rows: 1
   },
   navigation: {
     nextEl: '.right-gallery__next',
@@ -56,28 +56,25 @@ const galleryswiper = new Swiper('.gallery-swiper', {
       slidesPerView: 2,
       slidesPerColumn: 2,
       grid: {
-        rows: 2
+        rows: 1
       },
       spaceBetween: 34,
     },
-
     1190: {
-      spaceBetween: 30,
       slidesPerView: 2,
       slidesPerColumn: 2,
       slidesPerGroup: 2,
       grid: {
-        rows: 2
+        rows: 1
       },
-      spaceBetween: 30,
+      spaceBetween: 34,
     },
-
     1330: {
       spaceBetween: 50,
       slidesPerView: 3,
       slidesPerColumn: 2,
       grid: {
-        rows: 2,
+        rows: 1
       },
       slidesPerGroup: 3,
     }
@@ -118,41 +115,6 @@ const eventSlider = new Swiper(".event__slider", {
     1200: {
       slidesPerView: 3,
       slidesPerGroup: 1,
-      spaceBetween: 50,
-    }
-  }
-});
-
-// edition slider
-const editionSlider = new Swiper(".edition-slider", {
-  navigation: {
-    nextEl: ".right-edition__next",
-    prevEl: ".right-edition__prev"
-  },
-  pagination: {
-    el: '.right-edition__swiper-pagination',
-    type: 'fraction',
-  },
-  simulateTouch: true,
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 15,
-    },
-    767: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 34,
-    },
-    1024: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 49,
-    },
-    1200: {
-      slidesPerView: 3,
-      slidesPerGroup: 3,
       spaceBetween: 50,
     }
   }

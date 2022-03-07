@@ -86,13 +86,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // accordion
-  $( function() {
-    $( ".accordion-list" ).accordion({
+  $(function () {
+    $(".accordion-list").accordion({
       icons: false,
       heightStyle: "content",
       collapsible: true,
     });
-  } );
+  });
 
   // tabs painters
   const tabsPainter = document.querySelectorAll('.accordion__painter-list');
@@ -122,29 +122,29 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // tabs counter
-  const tabs = document.querySelector('.catalog-tabs');
-  const tabsBtn = document.querySelectorAll('.catalog-tabs__btn');
-  const tabsContent = document.querySelectorAll('.tabs__content');
-  if (tabs) {
-    tabs.addEventListener('click', (e) => {
-      if (e.target.classList.contains('catalog-tabs__btn')) {
-        const tabsPath = e.target.dataset.tabsPath;
-        tabsHandler(tabsPath);
-      }
-    })
+  // const tabs = document.querySelector('.catalog-tabs');
+  // const tabsBtn = document.querySelectorAll('.catalog-tabs__btn');
+  // const tabsContent = document.querySelectorAll('.tabs__content');
+  // if (tabs) {
+  //   tabs.addEventListener('click', (e) => {
+  //     if (e.target.classList.contains('catalog-tabs__btn')) {
+  //       const tabsPath = e.target.dataset.tabsPath;
+  //       tabsHandler(tabsPath);
+  //     }
+  //   })
 
-    const tabsHandler = (path) => {
-      tabsBtn.forEach(el => {
-        el.classList.remove('catalog-tabs__btn-active')
-      })
-      document.querySelector(`[data-tabs-path="${path}"]`).classList.add('catalog-tabs__btn-active')
+  //   const tabsHandler = (path) => {
+  //     tabsBtn.forEach(el => {
+  //       el.classList.remove('catalog-tabs__btn-active')
+  //     })
+  //     document.querySelector(`[data-tabs-path="${path}"]`).classList.add('catalog-tabs__btn-active')
 
-      tabsContent.forEach(el => {
-        el.classList.remove('tabs__content-active')
-      })
-      document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content-active')
-    }
-  };
+  //     tabsContent.forEach(el => {
+  //       el.classList.remove('tabs__content-active')
+  //     })
+  //     document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content-active')
+  //   }
+  // };
 
   // choices
   const defaultSelect = () => {
@@ -158,143 +158,75 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   defaultSelect();
 
-  // events
-  // const eventsItem = document.querySelectorAll('.event__item')
-  // const allEventsBtn = document.querySelector('.event__btn')
-  // const eventHiddenTablet = document.querySelector('.event__hidden_tablet')
-
-
-  // allEventsBtn.addEventListener('click', () => {
-  //   eventsItem.forEach(el => {
-  //     el.classList.remove('event__hidden')
-  //   })
-  //   allEventsBtn.classList.add('event__hidden')
-  // })
-
-  //   if (window.innerWidth <= 970) {
-  //     eventHiddenTablet.classList.add('event__hidden')
-  //   } else {
-  //     eventHiddenTablet.classList.remove('event__hidden')
-  //   }
-
-  //   if (window.innerWidth <= 667) {
-  //     eventsItem.forEach(el => {
-  //       el.classList.remove('event__hidden')
-  //     })
-  //   }
-
-  // categories
-
-(() => {
-  const checkBtn = document.querySelector('.js-check-heading');
-  
-  checkBtn.addEventListener('click', function () {
-      this.classList.toggle('is-active');
+  // tooltip
+  tippy('.tooltip-marker1', {
+    content: 'Пример современных тенденций современная методология разработки',
+    theme: 'purple',
+    trigger: 'click',
+    animation: 'perspective',
+    maxWidth: 264,
   });
-})();
+  tippy('.tooltip-marker2', {
+    content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
+    theme: 'purple',
+    trigger: 'click',
+    animation: 'perspective',
+    maxWidth: 264,
+  });
+  tippy('.tooltip-marker3', {
+    content: 'В стремлении повысить качество',
+    theme: 'purple',
+    trigger: 'click',
+    animation: 'perspective',
+    maxWidth: 242,
+  });
 
-// tooltip
-tippy('.tooltip-marker1', {
-  content: 'Пример современных тенденций современная методология разработки',
-  theme: 'purple',
-  trigger: 'click',
-  animation: 'perspective',
-  maxWidth: 264,
-});
-tippy('.tooltip-marker2', {
-  content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
-  theme: 'purple',
-  trigger: 'click',
-  animation: 'perspective',
-  maxWidth: 264,
-});
-tippy('.tooltip-marker3', {
-  content: 'В стремлении повысить качество',
-  theme: 'purple',
-  trigger: 'click',
-  animation: 'perspective',
-  maxWidth: 242,
-});
-
-// inputMask
-let inputs = document.querySelectorAll('input[type="tel"]');
-let im = new Inputmask('+7 (999) 999-99-99');
-im.mask(inputs);
-
-// just validate
-new JustValidate('.js-form', {
-  rules: {
-      name: {
-        required: true
-      },
-      tel: {
-          required: true,
-          tel: true
-      },
-      email: {
-        required: true,
-        email: true
-      },
-  },
-  colorWrong: '#ff5c00',
-  messages: {
-    name: 'Как вас зовут?',
-    tel: 'Укажите ваш телефон',
-    email: 'Укажите ваш email',
-  },
-  submitHandler: function (form, values, ajax) {
-
-      ajax({
-        url: 'https://just-validate-api.herokuapp.com/submit',
-        method: 'POST',
-        data: values,
-        async: true,
-        callback: function(response)  {
-          console.log(response)
-        }
-      });
+  // validation
+  const validation = new JustValidate('#form', {
+    errorFieldCssClass: 'is-invalid',
+    errorLabelCssClass: 'is-label-invalid',
+    errorLabelStyle: {
+      color: 'var(--color-wrong)',
     },
+    focusInvalidField: true,
+    lockForm: true,
   });
+  let selector = document.querySelector("input[type='tel']");
+  let im = new Inputmask("+7 (999)-999-99-99");
+  im.mask(selector);
+  validation
+    .addField('#name', [{
+        rule: 'required',
+        errorMessage: 'Как вас зовут?',
+      },
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Не короче 3 символов',
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+        errorMessage: 'Слишком длинное имя',
+      },
+      {
+        rule: 'customRegexp',
+        value: /^[A-zА-яЁё_ ]+$/i,
+        errorMessage: 'Недопустимый формат',            
+    },  
+    ]).addField('#phone', [{
+        rule: 'required',
+        errorMessage: 'Укажите ваш телефон',
+      },
+      {
+        validator: (value) => {
+          const phone = selector.inputmask.unmaskedvalue()
+          console.log(phone)
+          return Number(phone) && phone.length === 10;
+        },
+        errorMessage: 'Телефон не корректный!',
+      },
+    ]);
 
-
-// (() => {
-//   const tooltipBtn = document.querySelector('.tooltip');
   
-//   tooltipBtn.addEventListener('click', function () {
-//       this.classList.add('is-active');
-//   });
-// })();
-
-// Yandex Map
-ymaps.ready(init);
-
-function init() {
-  // Создание карты.
-  var myMap = new ymaps.Map("map", {
-    // Координаты центра карты.
-    // Порядок по умолчанию: «широта, долгота».
-    // Чтобы не определять координаты центра карты вручную,
-    // воспользуйтесь инструментом Определение координат.
-    center: [55.75846806898367, 37.60108849999989],
-    // Уровень масштабирования. Допустимые значения:
-    // от 0 (весь мир) до 19.
-    zoom: 14
-  });
-  // Создание геообъекта с типом точка (метка).
-  var myGeoObject = new ymaps.GeoObject({
-    geometry: {
-      type: "Point", // тип геометрии - точка
-      coordinates: [55.75846806898367, 37.60108849999989] // координаты точки
-    }
-  });
-  var myPlacemark = new ymaps.Placemark([55.75846806898367, 37.60108849999989], {}, {
-    iconLayout: 'default#image',
-    iconImageHref: 'img/svg/placemark.svg',
-    iconImageSize: [20, 20],
-    iconImageOffset: [-20, 0]
-  });
-  // Размещение геообъекта на карте.
-  myMap.geoObjects.add(myPlacemark);
-} 
-
 })
