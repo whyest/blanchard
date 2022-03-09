@@ -1432,10 +1432,15 @@ search-form__input::-ms-input-placeholder:active {
   margin-left: auto;
 }
 
+.content-acc {
+  border-bottom: 1px solid var(--color-silver);
+}
+
 .accordion__control {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   padding: 32px 0;
   margin-top: -1px;
   width: 100%;
@@ -1446,15 +1451,14 @@ search-form__input::-ms-input-placeholder:active {
 }
 
 .accordion__control:first-child {
-  border-top: 1px solid var(--color-silver);
-  z-index: 0;
+  border-color: var(--color-silver);
 }
 
-.ui-state-hover.accordion__control {
+/* .ui-state-hover.accordion__control {
   border-top: 1px solid var(--color-helitrope);
   border-bottom: 1px solid var(--color-helitrope);
   z-index: 5;
-}
+} */
 
 .ui-state-active.accordion__control {
   border-top: 1px solid var(--color-active);
@@ -1469,11 +1473,10 @@ search-form__input::-ms-input-placeholder:active {
   color: var(--color-helitrope);
 }
 
-/* .accordion__control:hover:not(:focus-visible) {
-  border-top: 1px solid var(--color-helitrope);
-  border-bottom: 1px solid var(--color-helitrope);
-  z-index: 1;
-} */
+.accordion__control:hover:not(:focus-visible) {
+  border-color: var(--color-helitrope);
+  z-index: 2;
+}
 
 
 .accordion__control:active:not(:focus-visible)>.accordion__title {
@@ -1680,7 +1683,7 @@ search-form__input::-ms-input-placeholder:active {
   outline-offset: -1px;
 }
 
-.swiper-wrapper > .event__item {
+.swiper-wrapper>.event__item {
   height: unset;
 }
 
@@ -2050,6 +2053,7 @@ search-form__input::-ms-input-placeholder:active {
   transition: -webkit-filter 0.3s ease 0s;
   transition: filter 0.3s ease 0s;
   transition: filter 0.3s ease 0s, -webkit-filter 0.3s ease 0s;
+
 }
 
 .partners__link:hover .partners__img {
