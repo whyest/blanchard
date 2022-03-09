@@ -154,6 +154,7 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
   }
 
   .search-margin.active {
@@ -302,7 +303,7 @@
   }
 
   .event__slider {
-    height: 686px;
+    min-height: 686px;
   }
 
   .event__swiper-container .swiper-pagination {
@@ -801,7 +802,7 @@
   }
 
   .event__slider {
-    height: 681px;
+    min-height: 681px;
   }
 
   .event-card__content {
@@ -877,6 +878,10 @@
 @media (max-width: 530px) {
   .container {
     padding: 0 15px;
+  }
+
+  .header__burger {
+    width: 25px;
   }
 
   .burger {

@@ -157,6 +157,7 @@ body {
 }
 
 .header__burger {
+  width: 36px;
   display: none;
 }
 
@@ -1102,7 +1103,7 @@ search-form__input::-ms-input-placeholder:active {
   border-radius: 50%;
   border: 2px solid transparent;
   background-color: var(--color-dove);
-  transition: all 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .right-gallery__prev:focus,
@@ -1665,7 +1666,7 @@ search-form__input::-ms-input-placeholder:active {
 .event__slider {
   display: flex;
   width: 100%;
-  height: 700px;
+  min-height: 700px;
 }
 
 .event__title {
@@ -1675,14 +1676,19 @@ search-form__input::-ms-input-placeholder:active {
 .event__item {
   display: flex;
   flex: 1 0 auto;
-  outline: 1px solid var(--color-dusty);
+  outline: 1px solid var(--color-silver);
   outline-offset: -1px;
+}
+
+.swiper-wrapper > .event__item {
+  height: unset;
 }
 
 .event__article {
   display: flex;
   flex-direction: column;
   height: 100%;
+  flex: 1 auto;
 }
 
 .event-card__img {
@@ -1696,32 +1702,12 @@ search-form__input::-ms-input-placeholder:active {
   background-size: cover;
 }
 
-.event-card__img_1 {
-  background-image: url('../img/event/event-1.jpg');
-}
-
-.event-card__img_2 {
-  background-image: url('../img/event/event-2.jpg');
-}
-
-.event-card__img_3 {
-  background-image: url('../img/event/event-3.jpg');
-}
-
-.event-card__img_4 {
-  background-image: url('../img/event/event-4.jpg');
-}
-
-.event-card__img_5 {
-  background-image: url('../img/event/event-5.jpg');
-}
-
 .event-card__content {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
-  padding: 13px 19px 46px 50px;
-  min-height: 338px;
+  padding: 13px 40px 40px 50px;
+  min-height: 347px;
 }
 
 .event-card__caption {
@@ -1745,6 +1731,10 @@ search-form__input::-ms-input-placeholder:active {
 }
 
 .event-card__text {
+  margin: 0;
+}
+
+.event__article {
   display: flex;
   margin: 0;
   width: 94%;
@@ -1766,7 +1756,7 @@ search-form__input::-ms-input-placeholder:active {
   content: '';
   position: absolute;
   top: 0;
-  bottom: -3px;
+  bottom: 2px;
   right: 0;
   left: 0;
   background-color: transparent;
@@ -2057,7 +2047,9 @@ search-form__input::-ms-input-placeholder:active {
 .partners__img {
   -webkit-filter: grayscale(1) opacity(0.3);
   filter: grayscale(1) opacity(0.3);
-  transition: all 0.3s ease 0s;
+  transition: -webkit-filter 0.3s ease 0s;
+  transition: filter 0.3s ease 0s;
+  transition: filter 0.3s ease 0s, -webkit-filter 0.3s ease 0s;
 }
 
 .partners__link:hover .partners__img {
