@@ -19,7 +19,7 @@ function init() {
     iconLayout: 'default#image',
     iconImageHref: 'img/svg/placemark.svg',
     iconImageSize: [20, 20],
-    iconImageOffset: [-20, 0]
+    iconImageOffset: [-10, -10]
   });
 
   map.controls.remove('geolocationControl'); // удаляем геолокацию
