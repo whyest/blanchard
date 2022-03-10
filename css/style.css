@@ -375,6 +375,10 @@ body {
   opacity: 1;
 }
 
+.nav-category__btn.focus-visible {
+  color: var(--color-white);
+}
+
 .header__wrap {
   display: flex;
   flex-direction: row;
