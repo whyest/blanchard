@@ -92,6 +92,8 @@ const eventSlider = new Swiper(".event__slider", {
   },
   pagination: {
     el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
   },
   simulateTouch: true,
   slideToClickedSlide: true,
@@ -100,7 +102,7 @@ const eventSlider = new Swiper(".event__slider", {
     320: {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      spaceBetween: 0,
+      spaceBetween: 15,
     },
     768: {
       slidesPerView: 2,
