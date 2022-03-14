@@ -212,8 +212,8 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         rule: 'customRegexp',
         value: /^[A-zА-яЁё_ ]+$/i,
-        errorMessage: 'Недопустимый формат',            
-    },  
+        errorMessage: 'Недопустимый формат',
+      },
     ]).addField('#phone', [{
         rule: 'required',
         errorMessage: 'Укажите ваш телефон',
@@ -228,5 +228,6 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     ]);
 
-  
+    // modal
+    
 })
